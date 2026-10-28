@@ -574,7 +574,6 @@ document.documentElement.classList.add('js');
       txt=document.getElementById('req-text'), btn=document.getElementById('r-send'),
       copyBtn=document.getElementById('req-copy'), copied=document.getElementById('req-copied');
   var dbP=null,userP=null;
-  try{ if(window.claude&&claude.use){ dbP=claude.use('db'); userP=claude.use('user'); } }catch(e){}
   function val(n){var el=form.elements[n];return el?String(el.value||'').trim():'';}
   function check(){
     var ok=true;
