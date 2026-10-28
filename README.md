@@ -3,7 +3,7 @@
 Static site for the Suraksha Sathi pilot. No build step, no trackers.
 
 - `index.html` – page for mothers and families (Hindi by default, English toggle)
-- `doctors/index.html` – page for doctors and hospitals (pilot places, compliance, revenue uplift, request form)
+- `hospital-pilot-2090/index.html` – page for doctors and hospitals (unlisted: shared directly, never linked from the mothers page) (pilot places, compliance, revenue uplift, request form)
 - `robots.txt` – blocks all crawlers while the pilot is under review (pages also carry `noindex, nofollow`)
 
 ## Before going public
