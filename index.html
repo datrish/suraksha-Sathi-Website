@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#06141A">
+<meta name="theme-color" content="#F4F8F7">
 <title>Suraksha Sathi · AI follow-up for maternal and infant care</title>
 <meta name="description" content="AI voice conversations that help hospitals stay connected with mothers and babies, from pregnancy through birth to the baby's vaccinations.">
 <meta name="robots" content="noindex, nofollow">
@@ -29,7 +29,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--night)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--night);color-scheme:inherit}
 body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);font-size:1.07rem;line-height:1.6;-webkit-font-smoothing:antialiased}
 p{margin:0} a{color:inherit} img,svg{max-width:100%}
 h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.02em;text-wrap:balance}
@@ -268,6 +268,63 @@ footer{border-top:1px solid rgba(120,230,225,.1);padding-block:2.4rem;color:var(
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem}
 footer b{color:var(--text);font-family:var(--display)}
 footer a{color:var(--text-2)}
+
+/* ===== Light theme: light page, product "screens" stay dark ===== */
+.console,.dash,.glass,.screen-dark{--text:#E6F3F1;--text-2:#A9C3C0;--text-3:#7E9C99;--deep-2:#14494A;--night:#06141A;color:var(--text)}
+html[data-theme="light"]{
+  --night:#F4F8F7; --night-2:#E7F1EF; --deep-2:#CFE2DF;
+  --text:#12302F; --text-2:#4A6563; --text-3:#6C8380;
+  --cyan-ink:#0B7470; --saffron-ink:#94540F; --line:rgba(15,58,59,.12);
+  color-scheme:light;
+}
+html[data-theme="light"] .console{background:linear-gradient(160deg,#17504F,#0A2128);box-shadow:0 40px 80px -30px rgba(15,58,59,.55),0 0 60px -20px rgba(92,232,225,.3) inset}
+html[data-theme="light"] .dash{background:linear-gradient(180deg,#134142,#081A20);box-shadow:0 50px 100px -40px rgba(15,58,59,.6)}
+html[data-theme="light"] .glass{background:linear-gradient(160deg,#164848,#0B2328);border-color:rgba(92,232,225,.18)}
+html[data-theme="light"] .top{background:rgba(244,248,247,.82);border-bottom-color:var(--line)}
+html[data-theme="light"] .brand small,html[data-theme="light"] .hero .tagline{color:var(--saffron-ink)}
+html[data-theme="light"] .kicker,html[data-theme="light"] .who-does{color:var(--cyan-ink)}
+html[data-theme="light"] .who-does.team{color:var(--saffron-ink)}
+html[data-theme="light"] .hero::before{background:radial-gradient(closest-side,rgba(47,184,178,.22),rgba(92,232,225,.06) 55%,transparent)}
+html[data-theme="light"] .hero::after{background:radial-gradient(closest-side,rgba(240,160,75,.14),transparent 70%)}
+html[data-theme="light"] .net g[stroke]{stroke:rgba(11,116,112,.18)}
+html[data-theme="light"] .net g[fill]:not([fill="none"]){fill:rgba(11,116,112,.45)}
+html[data-theme="light"] .demo-note{color:var(--text-3)}
+html[data-theme="light"] .btn-ghost{border-color:rgba(15,58,59,.25);color:var(--text)}
+html[data-theme="light"] .btn-ghost:hover{border-color:var(--cyan-ink)}
+html[data-theme="light"] .btn-glow,html[data-theme="light"] .stepb[aria-selected="true"] .dot,html[data-theme="light"] .stepb.done .dot{color:#06141A}
+.top .btn{display:inline-block;line-height:26px;text-align:center}
+html[data-theme="light"] .btn-glow{box-shadow:0 10px 26px -12px rgba(11,116,112,.55)}
+html[data-theme="light"] .statement{background:#fff;border-color:var(--line)}
+html[data-theme="light"] .statement p b{color:var(--text)}
+html[data-theme="light"] .stepb .dot{background:#fff}
+html[data-theme="light"] .stepb[aria-selected="true"] .dot,html[data-theme="light"] .stepb.done .dot{box-shadow:0 0 0 6px rgba(92,232,225,.22)}
+html[data-theme="light"] .showcase{background:radial-gradient(80% 60% at 50% 0%,rgba(92,232,225,.18),transparent 70%),var(--night-2)}
+html[data-theme="light"] .tag.live{background:rgba(11,116,112,.1);color:var(--cyan-ink)}
+html[data-theme="light"] .tag.next{background:rgba(15,58,59,.07);color:var(--text-3)}
+html[data-theme="light"] .leg::before{box-shadow:0 0 0 5px rgba(92,232,225,.2)}
+html[data-theme="light"] .leg.mid::before{box-shadow:0 0 0 5px rgba(240,160,75,.2)}
+html[data-theme="light"] .leg.mid{border-color:#E9C48F}
+html[data-theme="light"] .rules li,html[data-theme="light"] .steps li,html[data-theme="light"] .about,html[data-theme="light"] footer{border-color:var(--line)}
+html[data-theme="light"] .rules li:first-child{border-top-color:var(--line)}
+html[data-theme="light"] .steps li::before{color:var(--cyan-ink)}
+html[data-theme="light"] .terms,html[data-theme="light"] .form{background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(15,58,59,.35)}
+html[data-theme="light"] .terms li::before{background:var(--cyan-ink)}
+html[data-theme="light"] .f input,html[data-theme="light"] .f select,html[data-theme="light"] .f textarea{background:#fff;border-color:rgba(15,58,59,.22);color:var(--text)}
+html[data-theme="light"] .f input:focus,html[data-theme="light"] .f select:focus,html[data-theme="light"] .f textarea:focus{outline-color:var(--cyan-ink)}
+html[data-theme="light"] .f .err{color:#B3402C}
+html[data-theme="light"] .f.bad input,html[data-theme="light"] .f.bad select{border-color:#B3402C}
+html[data-theme="light"] .sent pre{background:var(--night-2);border-color:var(--line)}
+html[data-theme="light"] :focus-visible{outline-color:var(--cyan-ink)}
+html[data-theme="light"] .final::before{background:radial-gradient(closest-side,rgba(92,232,225,.2),transparent 70%)}
+
+/* Option B: brand-teal hero and final section */
+html[data-hero="teal"] .hero,html[data-hero="teal"] .final{background:linear-gradient(160deg,#1C4E4D,#173E3E 60%,#123434);--text:#F2FAF8;--text-2:#C2DAD6;--text-3:#9DBCB8;color:var(--text)}
+html[data-hero="teal"] .hero .tagline{color:#F6B66F}
+html[data-hero="teal"] .hero .btn-ghost,html[data-hero="teal"] .final .btn-ghost{border-color:rgba(242,250,248,.35);color:#F2FAF8}
+html[data-hero="teal"] .hero::before{background:radial-gradient(closest-side,rgba(92,232,225,.22),transparent 70%)}
+html[data-hero="teal"] .net g[stroke]{stroke:rgba(92,232,225,.2)} html[data-hero="teal"] .net g[fill]:not([fill="none"]){fill:rgba(92,232,225,.5)}
+html[data-hero="teal"] .final .small a{color:#F2FAF8}
+html[data-hero="teal"] .final .form{border-color:transparent}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
