@@ -269,6 +269,64 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 
 footer b{color:var(--text);font-family:var(--display)}
 footer a{color:var(--text-2)}
 
+/* --- interactive console --- */
+.progress{list-style:none;display:flex;gap:6px;padding:0;margin:1rem 0 0}
+.progress li{flex:1;height:3px;border-radius:3px;background:rgba(159,185,182,.2);overflow:hidden;position:relative}
+.progress li.on::after{content:"";position:absolute;inset:0;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.wave.idle span{animation-play-state:paused;height:10%!important}
+.wave.ring span{animation-duration:.9s}
+.convo{display:grid;gap:.6rem;align-content:start}
+.console{min-height:37.5rem}
+@media (max-width:999px){.console{min-height:0}}
+.convo.focus .line:not(.mo){display:none}
+.convo.focus .line.mo{margin-left:0;max-width:100%}
+.w.hl{color:#FFD19E;background:rgba(240,160,75,.22);border-radius:4px;box-shadow:0 0 0 2px rgba(240,160,75,.22);transition:background .4s}
+.wave{height:72px;margin:1.1rem 0 .9rem}
+.line{opacity:1;transform:none}
+.line .w{opacity:0;transition:opacity .18s}
+.line .w.v{opacity:1}
+.capture,.flagline,.mini{margin-top:.9rem;animation:rise .45s ease both}
+.cap-h{display:block;font-size:.78rem;font-weight:600;color:var(--text-3);margin-bottom:.45rem}
+.cap-grid{display:grid;gap:.35rem}
+.cap-grid div,.mini-row{display:flex;justify-content:space-between;gap:1rem;padding:.45rem .7rem;border-radius:10px;background:rgba(6,20,26,.5);font-size:.88rem}
+.cap-grid span,.mini-row span{color:var(--text-2)}
+.rep{color:var(--saffron);font-weight:600}
+.flagline{padding:.75rem .9rem;border-radius:12px;background:rgba(255,138,115,.1);border:1px solid rgba(255,138,115,.4)}
+.flagline b{display:block;color:var(--red);font-size:.95rem}
+.flagline span{color:var(--text-2);font-size:.85rem}
+.mini{display:grid;gap:.35rem}
+.mini-row.new{outline:1px solid rgba(255,138,115,.55);animation:pulse 1.6s ease 2}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(255,138,115,.15)}}
+.mini-row em{font-style:normal}
+.replay{margin-top:1rem;width:100%;min-height:44px;border-radius:999px;border:1px solid rgba(92,232,225,.35);background:transparent;color:var(--cyan);font:inherit;font-weight:600;cursor:pointer}
+.replay:hover{background:rgba(92,232,225,.08)}
+button.btn{font-family:inherit}
+html[data-theme="light"] .btn-ghost{background:#fff}
+
+/* --- interactive dashboard --- */
+.filters button{font:inherit;font-size:.8rem;padding:.35rem .75rem;border-radius:999px;border:1px solid var(--glass-line);background:transparent;color:var(--text-2);cursor:pointer;min-height:34px}
+.filters button.on{background:var(--cyan);color:#06141A;border-color:var(--cyan);font-weight:700}
+.plist{list-style:none;padding:0;margin:0}
+button.row{width:100%;background:none;border:0;border-bottom:1px solid rgba(120,230,225,.08);color:inherit;font:inherit;text-align:left;cursor:pointer;border-radius:12px;padding:.75rem .6rem}
+button.row:hover{background:rgba(92,232,225,.05)}
+button.row.sel{background:rgba(92,232,225,.1);box-shadow:inset 3px 0 0 var(--cyan)}
+button.row.flash{animation:rowflash 1.2s ease 2}
+@keyframes rowflash{50%{background:rgba(255,138,115,.14)}}
+.week{margin-top:1rem;font-size:.85rem;color:var(--text-3)}
+.detail h3{font-family:var(--display);font-size:1.4rem;letter-spacing:-.01em;margin-bottom:.2rem}
+.detail h3 small{display:block;font-family:var(--body);font-size:.88rem;font-weight:400;color:var(--text-3);margin-top:.15rem}
+.pd{animation:rise .35s ease both}
+.pd-h{font-size:.85rem;color:var(--text-3);margin-top:.8rem}
+.quote{margin-top:.5rem;padding:.7rem .9rem;border-radius:12px;background:rgba(240,160,75,.1);border:1px solid rgba(240,160,75,.25)}
+.quote .hi{display:block}
+.quote small{display:block;color:var(--text-2);font-size:.82rem}
+.kv{display:grid;gap:.35rem;margin-top:.8rem}
+.kv div{display:flex;justify-content:space-between;gap:1rem;padding:.5rem .75rem;border-radius:10px;background:rgba(6,20,26,.5);font-size:.9rem}
+.kv span{color:var(--text-2)}
+.why{margin:1rem 0 1.1rem;padding:.8rem .9rem;border-left:3px solid var(--saffron);background:rgba(240,160,75,.06);border-radius:0 10px 10px 0;font-size:.9rem;color:var(--text-2)}
+.why b{display:block;color:var(--text);margin-bottom:.15rem}
+@media (min-width:980px){.dash-grid{grid-template-columns:1fr 1fr}}
+
 /* ===== Light theme: light page, product "screens" stay dark ===== */
 .console,.dash,.glass,.screen-dark{--text:#E6F3F1;--text-2:#A9C3C0;--text-3:#7E9C99;--deep-2:#14494A;--night:#06141A;color:var(--text)}
 html[data-theme="light"]{
@@ -367,29 +425,103 @@ html[data-hero="teal"] .final .form{border-color:transparent}
       <p class="tagline" lang="hi">हर माँ और बच्चे के लिए आपके क्लिनिक का देखभाल साथी</p>
       <div class="btn-row">
         <a class="btn btn-glow" href="#request">Book a hospital pilot</a>
-        <a class="btn btn-ghost" href="#story">See a call unfold</a>
+        <button type="button" class="btn btn-ghost" id="play">See a call unfold</button>
       </div>
       <p class="assure"><span>Your doctor signs off every script</span><span>Hindi voice calls</span><span>No fee during the pilot</span></p>
     </div>
 
     <div>
-      <div class="console" id="console" role="img" aria-label="Demonstration of a Suraksha Sathi call. The AI greets the mother in Hindi on behalf of her hospital, she reports swelling and headaches, her answers are captured and the concern is flagged for clinical review.">
-        <div class="console-top" aria-hidden="true">
-          <div class="who"><span class="av">R</span><span><b>Rekha D.</b>Pregnancy, week 34</span></div>
-          <span class="status"><i></i><span id="c-status">AI speaking</span></span>
+      <div class="console" id="console" aria-label="Demonstration call with sample data">
+        <div class="console-top">
+          <div class="who" aria-hidden="true"><span class="av">R</span><span><b>Rekha D.</b>Pregnancy, week 34</span></div>
+          <span class="status" aria-hidden="true"><i></i><span id="c-status">Ready</span></span>
         </div>
-        <div class="wave" id="wave" aria-hidden="true"></div>
-        <div class="lines" aria-hidden="true">
-          <p class="line ai" data-s="0"><span class="hi" lang="hi">नमस्ते रेखा जी, मैं आपके अस्पताल की ओर से बोल रही हूँ। आप कैसी हैं?</span><small>Hello Rekha ji, I'm calling for your hospital. How are you?</small></p>
-          <p class="line mo" data-s="1"><span class="hi" lang="hi">पैरों में सूजन है, और सिर में दर्द रहता है।</span><small>My feet are swollen and I keep getting headaches.</small></p>
+        <ol class="progress" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol>
+        <div class="wave idle" id="wave" aria-hidden="true"></div>
+        <div class="convo" id="convo" aria-live="polite"></div>
+        <div class="capture" id="capture" hidden>
+          <span class="cap-h">Captured from her answers</span>
+          <div class="cap-grid">
+            <div><span>Swelling</span><b class="rep">Reported by mother</b></div>
+            <div><span>Headache</span><b class="rep">Reported by mother</b></div>
+            <div><span>Thursday check-up</span><b>Confirmed</b></div>
+          </div>
         </div>
-        <div class="chips" aria-hidden="true">
-          <span class="chip cap" data-s="2">Swelling: reported</span>
-          <span class="chip cap" data-s="2">Headache: reported</span>
-          <span class="chip flag" data-s="3">Flagged by protocol · for clinical review</span>
+        <div class="flagline" id="flagline" hidden>
+          <b>Reported concern matches your warning-sign list</b>
+          <span>Sent to your team for clinical review. Not a diagnosis.</span>
         </div>
+        <div class="mini" id="mini" hidden>
+          <span class="cap-h">Your team's list · updated</span>
+          <div class="mini-row new"><span>Rekha D.</span><em class="pill p-flag">For review</em></div>
+          <div class="mini-row"><span>Kavita M.</span><em class="pill p-miss">Missed</em></div>
+          <div class="mini-row"><span>Priya S.</span><em class="pill p-due">Due today</em></div>
+        </div>
+        <button type="button" class="replay" id="replay" hidden>Replay the call</button>
       </div>
       <span class="demo-note">Demonstration with sample data. Not a live patient.</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="sec showcase" id="product" aria-labelledby="h-product">
+  <div class="wrap">
+    <span class="kicker">What your hospital gets</span>
+    <h2 id="h-product">Every mother, every call, one view.</h2>
+    <p class="lede">A simple app for a phone or tablet. Tap a mother to see what she said, what was captured and why she's on today's list.</p>
+
+    <div class="dash" id="dash">
+      <div class="dash-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Needs attention today</span><span>Illustrative data</span></div>
+      <div class="dash-grid">
+        <div class="dash-col">
+          <div class="filters" role="group" aria-label="Filter the list">
+            <button type="button" class="on" data-f="all" aria-pressed="true">All</button>
+            <button type="button" data-f="flag" aria-pressed="false">For review</button>
+            <button type="button" data-f="miss" aria-pressed="false">Missed</button>
+            <button type="button" data-f="due" aria-pressed="false">Due</button>
+          </div>
+          <ul class="plist" role="list">
+            <li><button type="button" class="row sel" data-p="rekha" data-k="flag"><span class="ini">R</span><span><b>Rekha D.</b><small>Pregnancy, week 34 · reported a concern</small></span><span class="pill p-flag">For review</span></button></li>
+            <li><button type="button" class="row" data-p="kavita" data-k="miss"><span class="ini">K</span><span><b>Kavita M.</b><small>Pregnancy, week 28 · growth scan overdue</small></span><span class="pill p-miss">Missed</span></button></li>
+            <li><button type="button" class="row" data-p="priya" data-k="due"><span class="ini">P</span><span><b>Priya S.</b><small>Baby, 9 weeks · 10-week vaccine</small></span><span class="pill p-due">Due today</span></button></li>
+            <li><button type="button" class="row" data-p="anita" data-k="due"><span class="ini">A</span><span><b>Anita R.</b><small>Baby, 13 weeks · 14-week vaccine</small></span><span class="pill p-due">Due today</span></button></li>
+          </ul>
+          <p class="week">This week: 36 answered, 9 retried, 5 WhatsApp follow-ups, 3 concerns for review.</p>
+        </div>
+        <div class="dash-col detail" aria-live="polite">
+          <div class="pd" data-p="rekha">
+            <h3>Rekha D. <small>Pregnancy, week 34</small></h3>
+            <p class="pd-h">Today's call · answered by Rekha</p>
+            <p class="quote"><span class="hi" lang="hi">"पैरों में सूजन है, और सिर में दर्द रहता है।"</span><small>"My feet are swollen and I keep getting headaches."</small></p>
+            <div class="kv"><div><span>Swelling</span><b class="rep">Reported</b></div><div><span>Headache</span><b class="rep">Reported</b></div><div><span>Thursday check-up</span><b>Confirmed</b></div></div>
+            <div class="why"><b>Why she's on the list</b>Her reported symptoms match a warning sign on your doctor's list. Suraksha Sathi does not assess or diagnose. Your team decides what to do.</div>
+            <ul class="tl"><li><b>Week 28</b>Enrolled with consent</li><li><b>Week 30</b>Scan reminder · answered</li><li class="f"><b>Today</b>Check-in · concern reported</li><li><b>Thursday</b>Antenatal check-up</li></ul>
+          </div>
+          <div class="pd" data-p="kavita" hidden>
+            <h3>Kavita M. <small>Pregnancy, week 28</small></h3>
+            <p class="pd-h">Growth scan was due on Monday</p>
+            <div class="kv"><div><span>Call, 10:00</span><b>No answer</b></div><div><span>Retry, 17:00</span><b>No answer</b></div><div><span>WhatsApp</span><b>Sent, not yet read</b></div></div>
+            <div class="why"><b>Why she's on the list</b>Two calls went unanswered and her scan is overdue. A staff call may help.</div>
+            <ul class="tl"><li><b>Week 24</b>Enrolled with consent</li><li><b>Week 26</b>Check-up reminder · answered</li><li class="f"><b>Monday</b>Growth scan · missed</li></ul>
+          </div>
+          <div class="pd" data-p="priya" hidden>
+            <h3>Priya S. <small>Baby, 9 weeks</small></h3>
+            <p class="pd-h">Yesterday's call · answered by Priya</p>
+            <div class="kv"><div><span>10-week vaccine</span><b>Coming today</b></div><div><span>Baby feeding well</span><b>Yes</b></div><div><span>Concerns</span><b>None reported</b></div></div>
+            <div class="why"><b>Why she's on the list</b>Her baby's vaccine is due today on your clinic's schedule.</div>
+            <ul class="tl"><li><b>Birth</b>Moved to vaccine schedule</li><li><b>6 weeks</b>Vaccine given</li><li class="f"><b>Today</b>10-week vaccine</li></ul>
+          </div>
+          <div class="pd" data-p="anita" hidden>
+            <h3>Anita R. <small>Baby, 13 weeks</small></h3>
+            <p class="pd-h">Yesterday's call · answered by her husband</p>
+            <div class="kv"><div><span>14-week vaccine</span><b>Reminder passed on</b></div><div><span>Health questions</span><b>Kept for Anita</b></div></div>
+            <div class="why"><b>Why she's on the list</b>The vaccine is due today. Her husband took the reminder; questions about her own health are only asked to her.</div>
+            <ul class="tl"><li><b>10 weeks</b>Vaccine given</li><li class="f"><b>Today</b>14-week vaccine</li></ul>
+          </div>
+        </div>
+      </div>
+      <p class="dash-foot">Illustrative data. Sample names and calls, not real patients or results.</p>
     </div>
   </div>
 </section>
@@ -422,7 +554,7 @@ html[data-hero="teal"] .final .form{border-color:transparent}
       <button class="stepb" role="tab" id="t0" aria-controls="p0" aria-selected="true"><span class="dot">1</span><span class="t">Scheduled</span></button>
       <button class="stepb" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><span class="dot">2</span><span class="t">Conversation</span></button>
       <button class="stepb" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="dot">3</span><span class="t">Captured</span></button>
-      <button class="stepb" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="dot">4</span><span class="t">Flagged</span></button>
+      <button class="stepb" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="dot">4</span><span class="t">For review</span></button>
       <button class="stepb team" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><span class="dot">5</span><span class="t">Your team</span></button>
     </div>
 
@@ -440,61 +572,15 @@ html[data-hero="teal"] .final .form{border-color:transparent}
         <div class="glass"><div class="form-out"><div><span>Feeling well</span>No</div><div><span>Swelling</span><b class="y">Reported</b></div><div><span>Headache</span><b class="y">Reported</b></div><div><span>Thursday check-up</span>Confirmed</div><div><span>Answered by</span>Mother</div></div></div>
       </div>
       <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3">
-        <div class="panel-copy"><h3>Warning signs are flagged by your protocol.</h3><p>Suraksha Sathi compares her answers with the warning signs your doctor set. It flags, it never diagnoses, and it never tells her what to do medically.</p><span class="who-does">Automated, by your rules</span></div>
-        <div class="glass"><div class="flagcard"><b>Flagged: swelling with headache</b><p>Rekha D. · Pregnancy, week 34 · reported on today's call</p><p class="rule">Matched rule set by your doctor. Waiting for clinical review.</p></div></div>
+        <div class="panel-copy"><h3>Reported concerns are flagged by your rules.</h3><p>Suraksha Sathi checks what she reported against the warning-sign list your doctor set. A match puts her in front of your team. It never assesses, diagnoses or tells her what to do medically.</p><span class="who-does">Automated, by your rules</span></div>
+        <div class="glass"><div class="flagcard"><b>Reported concern: swelling and headache</b><p>Rekha D. · Pregnancy, week 34 · reported by her on today's call</p><p class="rule">Matches your doctor's warning-sign list. For clinical review. Not a diagnosis.</p></div></div>
       </div>
       <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4">
         <div class="panel-copy"><h3>It lands on your list. You decide.</h3><p>Flags, missed calls and due visits sit at the top of your team's daily list. What happens next is a clinical decision, and it stays with you.</p><span class="who-does team">Your team</span></div>
-        <div class="glass"><div class="sched"><div class="now"><span style="color:var(--red)">Flagged</span>Rekha D. · swelling with headache</div><div><span style="color:var(--saffron)">Missed</span>Kavita M. · growth scan, 2 calls</div><div><span style="color:var(--cyan)">Due today</span>Priya S. · 10-week vaccine</div></div></div>
+        <div class="glass"><div class="sched"><div class="now"><span style="color:var(--red)">For review</span>Rekha D. · reported concern</div><div><span style="color:var(--saffron)">Missed</span>Kavita M. · growth scan, 2 calls</div><div><span style="color:var(--cyan)">Due today</span>Priya S. · 10-week vaccine</div></div></div>
       </div>
     </div>
     <p class="story-note">This is a demonstration using sample data. Names and calls are not real.</p>
-  </div>
-</section>
-
-<!-- PRODUCT -->
-<section class="sec showcase" id="product" aria-labelledby="h-product">
-  <div class="wrap">
-    <span class="kicker">The product</span>
-    <h2 id="h-product">Every mother, every call, one view.</h2>
-    <p class="lede">A simple app for a phone or tablet. Your team sees who is due, who hasn't answered and who has raised a concern, without ringing round.</p>
-
-    <div class="dash" role="img" aria-label="Illustrative Suraksha Sathi dashboard with sample data: a needs-attention list, a breakdown of this week's call outcomes, and a timeline for one mother.">
-      <div class="dash-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>Needs attention today</span><span>Illustrative data</span></div>
-      <div class="dash-grid" aria-hidden="true">
-        <div class="dash-col">
-          <div class="filters"><span class="on">All</span><span>Flagged</span><span>Missed</span><span>Due</span><span>Pregnancy</span><span>Baby</span></div>
-          <div class="row"><span class="ini">R</span><span><b>Rekha D.</b><small>Pregnancy · week 34 · swelling with headache</small></span><span class="pill p-flag">Flagged</span></div>
-          <div class="row"><span class="ini">K</span><span><b>Kavita M.</b><small>Pregnancy · growth scan · 2 calls unanswered, WhatsApp sent</small></span><span class="pill p-miss">Missed</span></div>
-          <div class="row"><span class="ini">P</span><span><b>Priya S.</b><small>Baby · 10-week vaccine · confirmed on call</small></span><span class="pill p-due">Due today</span></div>
-          <div class="row"><span class="ini">A</span><span><b>Anita R.</b><small>Baby · 14-week vaccine · confirmed by husband</small></span><span class="pill p-due">Due today</span></div>
-          <div class="row"><span class="ini">S</span><span><b>Seema K.</b><small>Pregnancy · check-up attended</small></span><span class="pill p-ok">Done</span></div>
-        </div>
-        <div class="dash-col">
-          <h3>This week's calls</h3>
-          <div class="bars">
-            <div>Answered<em><i style="width:72%;background:var(--cyan)"></i></em><b>36</b></div>
-            <div>Retried<em><i style="width:18%;background:var(--cyan-dim)"></i></em><b>9</b></div>
-            <div>WhatsApp sent<em><i style="width:10%;background:var(--saffron)"></i></em><b>5</b></div>
-            <div>Concerns flagged<em><i style="width:6%;background:var(--red)"></i></em><b>3</b></div>
-          </div>
-          <h3>Rekha D. · timeline</h3>
-          <ul class="tl">
-            <li><b>Week 28</b>Enrolled with consent</li>
-            <li><b>Week 30</b>Scan reminder · answered</li>
-            <li class="f"><b>Today</b>Check-in · concern flagged</li>
-            <li><b>Thursday</b>Antenatal check-up</li>
-          </ul>
-        </div>
-      </div>
-      <p class="dash-foot">Illustrative data. Sample names and numbers, not results from any hospital.</p>
-    </div>
-
-    <div class="caps">
-      <p><b>Scheduled follow-up.</b> Calls planned from her dates and your clinic's own schedule.</p>
-      <p><b>Call outcomes.</b> Answered, retried and WhatsApp sent, all visible.</p>
-      <p><b>Flagged concerns.</b> Warning signs from your protocol go to the top.</p>
-    </div>
   </div>
 </section>
 
@@ -636,16 +722,62 @@ html[data-hero="teal"] .final .form{border-color:transparent}
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* hero waveform + scripted demo call */
+  /* hero: interactive demonstration call */
   var wave=document.getElementById('wave'), n=window.innerWidth<480?26:38;
-  for(var i=0;i<n;i++){var s=document.createElement('span');var h=30+Math.round(65*Math.abs(Math.sin(i*.7)*Math.cos(i*.23)));s.style.setProperty('--h',h+'%');s.style.animationDelay=(i*.045)+'s';wave.appendChild(s);}
-  var con=document.getElementById('console'), st=document.getElementById('c-status');
-  var labels=['AI speaking','Mother speaking','Capturing answers','Concern flagged'];
-  function show(k){
-    con.querySelectorAll('[data-s]').forEach(function(el){el.classList.toggle('on',+el.dataset.s<=k);});
-    wave.classList.toggle('mother',k===1); st.textContent=labels[k];
+  for(var i=0;i<n;i++){var b=document.createElement('span');b.style.setProperty('--h',(30+Math.round(65*Math.abs(Math.sin(i*.7)*Math.cos(i*.23))))+'%');b.style.animationDelay=(i*.045)+'s';wave.appendChild(b);}
+  var con=document.getElementById('console'), st=document.getElementById('c-status'), convo=document.getElementById('convo'),
+      cap=document.getElementById('capture'), flag=document.getElementById('flagline'), mini=document.getElementById('mini'),
+      rep=document.getElementById('replay'), bars=[].slice.call(con.querySelectorAll('.progress li')), timers=[];
+  var LINES=[
+    {who:'ai',hi:'नमस्ते रेखा जी, मैं आपके अस्पताल की ओर से बोल रही हूँ। आप और बच्चा कैसे हैं?',en:"Hello Rekha ji, I'm calling for your hospital. How are you and the baby?"},
+    {who:'mo',hi:'पैरों में सूजन है, और सिर में दर्द रहता है।',en:'My feet are swollen and I keep getting headaches.'},
+    {who:'ai',hi:'मैं यह बात अस्पताल की टीम तक पहुँचा देती हूँ। तबीयत ज़्यादा ख़राब लगे तो सीधे अस्पताल से संपर्क करें।',en:"I'll pass this to the hospital team. If you feel worse, contact the hospital directly."}
+  ];
+  function later(fn,ms){timers.push(setTimeout(fn,ms));}
+  function setWave(mode){wave.className='wave'+(mode?' '+mode:'');}
+  function stage(k,label){bars.forEach(function(b,j){b.classList.toggle('on',j<k);});st.textContent=label;}
+  function say(L,instant){
+    var p=document.createElement('p');p.className='line '+L.who;
+    var hi=document.createElement('span');hi.className='hi';hi.lang='hi';
+    L.hi.split(' ').forEach(function(w,j){var e=document.createElement('span');e.className='w'+(instant?' v':'');e.textContent=(j?' ':'')+w;hi.appendChild(e);});
+    var sm=document.createElement('small');sm.textContent=L.en;
+    p.appendChild(hi);p.appendChild(sm);convo.appendChild(p);
+    if(!instant){var ws=hi.querySelectorAll('.w');ws.forEach(function(e,j){later(function(){e.classList.add('v');},j*170);});return ws.length*170;}
+    return 0;
   }
-  if(reduce){show(3);} else {var k=0;show(0);setInterval(function(){k=(k+1)%5;show(Math.min(k,3));},2600);}
+  function markWords(){convo.querySelectorAll('.line.mo .w').forEach(function(w){if(/सूजन|दर्द/.test(w.textContent))w.classList.add('hl');});}
+  function reset(){timers.forEach(clearTimeout);timers=[];convo.innerHTML='';convo.classList.remove('focus');cap.hidden=flag.hidden=mini.hidden=rep.hidden=true;setWave('idle');stage(0,'Ready');}
+  function finalState(){reset();LINES.forEach(function(L){say(L,true);});convo.classList.add('focus');markWords();cap.hidden=flag.hidden=mini.hidden=false;rep.hidden=false;stage(5,'Sent to your team');setWave('idle');}
+  function play(){
+    reset(); var t=0;
+    stage(0,'Calling…'); setWave('ring');
+    t+=1400; later(function(){stage(1,'AI speaking');setWave('');var d=say(LINES[0]);later(function(){setWave('idle');},d+200);},t);
+    t+=3600; later(function(){stage(2,'Mother speaking');setWave('mother');var d=say(LINES[1]);later(function(){setWave('idle');},d+300);},t);
+    t+=2800; later(function(){stage(2,'AI speaking');setWave('');var d=say(LINES[2]);later(function(){setWave('idle');},d+200);},t);
+    t+=4600; later(function(){stage(3,'Capturing answers');convo.classList.add('focus');markWords();cap.hidden=false;},t);
+    t+=1800; later(function(){stage(4,'Checking your warning-sign list');flag.hidden=false;},t);
+    t+=2400; later(function(){stage(5,'Sent to your team');cap.hidden=true;mini.hidden=false;rep.hidden=false;flashDash();},t);
+  }
+  rep.addEventListener('click',play);
+  document.getElementById('play').addEventListener('click',function(){
+    if(window.innerWidth<1000) con.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    reduce?finalState():play();
+  });
+  if(reduce) finalState();
+  else if('IntersectionObserver' in window){var seen=false;new IntersectionObserver(function(es){if(es[0].isIntersecting&&!seen){seen=true;play();}},{threshold:.5}).observe(con);}
+  else play();
+
+  /* dashboard: filters and patient detail */
+  var dash=document.getElementById('dash'), rows=[].slice.call(dash.querySelectorAll('button.row')), pds=[].slice.call(dash.querySelectorAll('.pd')), fbtn=[].slice.call(dash.querySelectorAll('.filters button'));
+  function pick(id){rows.forEach(function(r){r.classList.toggle('sel',r.dataset.p===id);r.setAttribute('aria-pressed',r.dataset.p===id);});pds.forEach(function(d){d.hidden=d.dataset.p!==id;});}
+  rows.forEach(function(r){r.addEventListener('click',function(){pick(r.dataset.p);});});
+  fbtn.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.dataset.f; fbtn.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b);});
+    var first=null; rows.forEach(function(r){var show=f==='all'||r.dataset.k===f;r.parentNode.hidden=!show;if(show&&!first)first=r;});
+    if(first)pick(first.dataset.p);
+  });});
+  function flashDash(){var r=rows[0];r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash');setTimeout(function(){r.classList.remove('flash');},2600);}
+  pick('rekha');
 
   /* story tabs */
   var tabs=[].slice.call(document.querySelectorAll('.stepb')), fill=document.getElementById('fill'), cur=0, timer=null, touched=false;
