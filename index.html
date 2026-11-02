@@ -3,256 +3,278 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#173E3E">
-<title>Suraksha Sathi · Maternal and infant follow-up for hospitals</title>
-<meta name="description" content="Suraksha Sathi is your clinic's care companion for every mother and baby: scheduled Hindi voice calls, captured responses and concerns flagged to your team, from pregnancy to the baby's vaccines.">
+<meta name="theme-color" content="#06141A">
+<title>Suraksha Sathi · AI follow-up for maternal and infant care</title>
+<meta name="description" content="AI voice conversations that help hospitals stay connected with mothers and babies, from pregnancy through birth to the baby's vaccinations.">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Suraksha Sathi · Your clinic's care companion for every mother and baby">
-<meta property="og:description" content="Scheduled Hindi voice calls, captured responses and concerns flagged to your team, from pregnancy to the baby's vaccines. Now inviting pilot hospitals.">
+<meta property="og:title" content="Suraksha Sathi · Every mother deserves care beyond the consultation">
+<meta property="og:description" content="AI voice conversations that keep hospitals connected with mothers and babies. Now inviting pilot hospitals.">
 <meta property="og:image" content="https://www.surakshacall.com/icon-512.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Mukta:wght@400;600&display=swap">
 <style>
 :root{
-  --teal:#173E3E; --teal-2:#21504F; --teal-3:#2E6260;
-  --cream:#FAF5EE; --sand:#F3E9DB; --sand-2:#E9D9C2; --paper:#FFFDF9;
-  --orange:#E3923A; --orange-ink:#8F4D0E;
-  --ink:#1E2928; --ink-2:#4A5453; --line:#E3D3BC; --line-teal:rgba(250,245,238,.16);
-  --on-teal:#FAF5EE; --on-teal-2:#C7D8D4;
-  --red:#A63A2B; --red-bg:#F7E4DF; --amber-bg:#FBEBD3; --green:#2D6A4F; --green-bg:#E2EFE7;
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --hi:"Tiro Devanagari Hindi","Noto Serif Devanagari",serif;
-  --sans:"Mukta","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  color-scheme:light;
+  --night:#06141A; --night-2:#0A1E25; --deep:#0F3A3B; --deep-2:#14494A;
+  --glass:rgba(20,73,74,.38); --glass-line:rgba(120,230,225,.16);
+  --cyan:#5CE8E1; --cyan-dim:#2FB8B2; --saffron:#F0A04B; --saffron-dim:#B8752C;
+  --text:#E6F3F1; --text-2:#9FB9B6; --text-3:#6E8C89;
+  --red:#FF8A73; --cream:#FAF5EE;
+  --display:"Bricolage Grotesque","Hanken Grotesk",system-ui,sans-serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --hindi:"Mukta","Noto Sans Devanagari","Nirmala UI",sans-serif;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:1.075rem;line-height:1.6}
-img,svg{max-width:100%}
-a{color:inherit}
-p{margin:0}
-h1,h2,h3{margin:0;font-weight:500;color:var(--teal);text-wrap:balance}
-h1,h2{font-family:var(--serif);letter-spacing:-.01em}
-h3{font-family:var(--sans);font-weight:700;font-size:1.1rem;line-height:1.35}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--night)}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);font-size:1.07rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+p{margin:0} a{color:inherit} img,svg{max-width:100%}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.02em;text-wrap:balance}
 [hidden]{display:none!important}
-:focus-visible{outline:3px solid var(--orange-ink);outline-offset:3px;border-radius:6px}
-.teal :focus-visible{outline-color:var(--orange)}
-.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:16px;top:-60px;z-index:30;background:var(--teal);color:var(--on-teal);padding:.6rem 1rem;border-radius:8px;font-weight:700;text-decoration:none}
-.skip:focus{top:8px}
+.hi{font-family:var(--hindi)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-60px;z-index:50;background:var(--cyan);color:var(--night);padding:.6rem 1rem;border-radius:8px;font-weight:700}
+.skip:focus{top:10px}
+.wrap{width:100%;max-width:74rem;margin:0 auto;padding-inline:max(18px,env(safe-area-inset-left,0px))}
+.sec{padding-block:clamp(4rem,10vw,7.5rem)}
+.kicker{display:block;color:var(--cyan);font-weight:600;font-size:.98rem;margin-bottom:1rem}
+h2{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;max-width:20ch}
+.lede{color:var(--text-2);font-size:1.15rem;max-width:38rem;margin-top:1.1rem}
 
-.wrap{width:100%;max-width:72rem;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
-.band{padding-block:clamp(3.25rem,8vw,6rem)}
-.sand{background:var(--sand)}
-.teal{background:var(--teal);color:var(--on-teal)}
-.teal h2,.teal h3{color:var(--on-teal)}
-.eyebrow{display:block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-ink);margin-bottom:.9rem}
-.teal .eyebrow{color:var(--orange)}
-h2{font-size:clamp(1.85rem,4.6vw,2.75rem);line-height:1.15;max-width:22ch}
-.lede{font-size:1.15rem;color:var(--ink-2);max-width:40rem;margin-top:1rem}
-.teal .lede{color:var(--on-teal-2)}
-.hi-line{font-family:var(--hi);font-size:1.05rem;color:var(--orange-ink)}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.7rem 1.35rem;border-radius:10px;font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s ease,background .15s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--orange);color:var(--teal)}
-.btn-primary:hover{background:#EBA052}
-.btn-line{border-color:currentColor;background:transparent}
-.btn-wa{background:#1F7A4D;color:#fff}
-.btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:background .2s,border-color .2s,box-shadow .2s}
+.btn-glow{background:var(--cyan);color:var(--night);box-shadow:0 0 0 0 rgba(92,232,225,.0),0 10px 30px -10px rgba(92,232,225,.6)}
+.btn-glow:hover{background:#7FF0EA;box-shadow:0 0 0 6px rgba(92,232,225,.12),0 10px 30px -10px rgba(92,232,225,.7)}
+.btn-ghost{border-color:var(--glass-line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--cyan)}
 
 /* header */
-header.top{position:sticky;top:0;z-index:20;background:rgba(23,62,62,.97);color:var(--on-teal);backdrop-filter:saturate(1.2) blur(6px)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--on-teal)}
-.brand-mark{width:32px;height:32px;flex:none}
-.brand b{font-family:var(--serif);font-weight:600;font-size:1.2rem;letter-spacing:.005em}
-.brand small{display:block;font-family:var(--hi);color:var(--orange);font-size:.85rem;line-height:1}
-nav.links{display:none;gap:1.6rem;font-size:.97rem}
-nav.links a{text-decoration:none;color:var(--on-teal-2)}
-nav.links a:hover{color:var(--on-teal)}
-.top .btn{min-height:42px;padding:.45rem 1rem;font-size:.95rem}
-@media (min-width:900px){nav.links{display:flex}}
+.top{position:sticky;top:0;z-index:40;background:rgba(6,20,26,.72);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(120,230,225,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:66px}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--hindi);color:var(--saffron);font-size:.82rem;line-height:1}
+.mark{width:34px;height:34px;flex:none}
+.nav{display:none;gap:1.8rem;font-size:.97rem}
+.nav a{text-decoration:none;color:var(--text-2)} .nav a:hover{color:var(--text)}
+.top .btn{min-height:42px;padding:.5rem 1.1rem;font-size:.94rem;white-space:nowrap}
+.brand span{white-space:nowrap}
+@media (max-width:520px){.top .long{display:none}.brand small{display:none}}
+section[id]{scroll-margin-top:72px}
+@media (min-width:920px){.nav{display:flex}}
 
 /* hero */
-.hero{background:var(--teal);color:var(--on-teal);padding-block:clamp(2.5rem,7vw,5rem) clamp(3rem,8vw,5.5rem);overflow:hidden}
-.hero-grid{display:grid;gap:2.75rem;align-items:center}
-.hero h1{color:var(--on-teal);font-size:clamp(2.2rem,6.2vw,3.7rem);line-height:1.08;max-width:15ch}
-.hero .tag{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:1.1rem}
-.hero .lede{color:var(--on-teal-2);font-size:1.18rem}
-.hero .hi-line{color:var(--orange);margin-top:1.25rem;font-size:1.1rem}
-.hero .btn-line{color:var(--on-teal)}
-.hero-note{margin-top:1.4rem;font-size:.92rem;color:var(--on-teal-2);display:flex;flex-wrap:wrap;gap:.35rem 1.25rem}
-.hero-note span::before{content:"✓ ";color:var(--orange);font-weight:700}
-@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero{position:relative;overflow:hidden;padding-block:clamp(3rem,8vw,6.5rem) clamp(3.5rem,9vw,7rem);isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(closest-side,rgba(47,184,178,.28),rgba(15,58,59,.12) 55%,transparent);z-index:-1}
+.hero::after{content:"";position:absolute;left:-15%;bottom:-40%;width:60vw;height:60vw;max-width:760px;max-height:760px;background:radial-gradient(closest-side,rgba(240,160,75,.10),transparent 70%);z-index:-1}
+.net{position:absolute;inset:0;z-index:-1;opacity:.5;pointer-events:none}
+.hero-grid{display:grid;gap:3rem;align-items:center}
+@media (min-width:1000px){.hero-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.hero h1{font-size:clamp(2.6rem,7.2vw,4.9rem);line-height:.98;letter-spacing:-.035em}
+.hero .lede{font-size:1.2rem}
+.hero .tagline{margin-top:1.4rem;font-family:var(--hindi);color:var(--saffron);font-size:1.12rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.assure{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.6rem;color:var(--text-3);font-size:.93rem}
+.assure span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:.5rem;vertical-align:.15rem}
 
-/* product mock (phone) */
-.device{position:relative;margin-inline:auto;width:min(100%,370px);background:#0E2828;border-radius:34px;padding:12px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06) inset}
-.screen{background:var(--paper);color:var(--ink);border-radius:24px;overflow:hidden;font-size:.86rem;line-height:1.35}
-.scr-head{background:var(--sand);padding:14px 16px 12px;border-bottom:1px solid var(--line)}
-.scr-head .row{display:flex;justify-content:space-between;align-items:center}
-.scr-head b{font-size:1rem;color:var(--teal)}
-.scr-head .date{font-size:.76rem;color:var(--ink-2)}
-.chips{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.chip{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink-2)}
-.chip.on{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
-.pt{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid #EFE4D4}
-.av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--teal);background:var(--sand-2)}
-.pt b{display:block;font-size:.88rem}
-.pt small{display:block;color:var(--ink-2);font-size:.75rem}
-.st{font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
-.st.flag{background:var(--red-bg);color:var(--red)}
-.st.miss{background:var(--amber-bg);color:var(--orange-ink)}
-.st.ok{background:var(--green-bg);color:var(--green)}
-.st.due{background:var(--sand);color:var(--teal)}
-.scr-call{margin:12px 14px 14px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff}
-.scr-call .lab{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
-.scr-call .q{margin-top:6px;font-family:var(--hi);font-size:.9rem;color:var(--ink)}
-.scr-call .tr{font-size:.75rem;color:var(--ink-2);margin-top:2px}
-.scr-call .resp{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.illus{display:block;text-align:center;margin-top:12px;font-size:.78rem;color:var(--on-teal-2);letter-spacing:.04em}
+/* the call console (hero visual) */
+.console{position:relative;border-radius:22px;padding:1.4rem;background:linear-gradient(160deg,rgba(20,73,74,.55),rgba(10,30,37,.85));border:1px solid var(--glass-line);box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 60px -20px rgba(92,232,225,.25) inset}
+.console-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.9rem;color:var(--text-2)}
+.who{display:flex;align-items:center;gap:.7rem}
+.who .av{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#FFC98B,var(--saffron-dim));display:grid;place-items:center;color:var(--night);font-weight:700}
+.who b{display:block;color:var(--text);font-size:1rem}
+.status{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .7rem;border-radius:999px;background:rgba(92,232,225,.1);color:var(--cyan);font-weight:600;font-size:.82rem}
+.status i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.35}}
+.wave{display:flex;align-items:center;justify-content:center;gap:4px;height:96px;margin:1.4rem 0 1rem}
+.wave span{display:block;width:5px;border-radius:4px;background:linear-gradient(var(--cyan),var(--cyan-dim));height:12%;animation:bar 1.3s ease-in-out infinite;box-shadow:0 0 12px rgba(92,232,225,.45)}
+.wave.mother span{background:linear-gradient(#FFD19E,var(--saffron));box-shadow:0 0 12px rgba(240,160,75,.5)}
+@keyframes bar{0%,100%{height:12%}50%{height:var(--h,60%)}}
+.lines{display:grid;gap:.6rem;min-height:9.2rem}
+.line{padding:.7rem .9rem;border-radius:14px;font-size:.95rem;max-width:92%;opacity:.25;transition:opacity .5s,transform .5s;transform:translateY(4px)}
+.line.on{opacity:1;transform:none}
+.line .hi{display:block;font-size:1.02rem}
+.line small{display:block;color:var(--text-2);font-size:.82rem}
+.line.ai{background:rgba(92,232,225,.08);border:1px solid rgba(92,232,225,.18)}
+.line.mo{background:rgba(240,160,75,.1);border:1px solid rgba(240,160,75,.25);margin-left:auto}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem;min-height:2rem}
+.chip{font-size:.8rem;font-weight:600;padding:.3rem .65rem;border-radius:999px;border:1px solid var(--glass-line);color:var(--text-2);opacity:0;transform:scale(.95);transition:opacity .4s,transform .4s}
+.chip.on{opacity:1;transform:none}
+.chip.flag{border-color:rgba(255,138,115,.5);color:var(--red);background:rgba(255,138,115,.08)}
+.chip.cap{border-color:rgba(92,232,225,.35);color:var(--cyan)}
+.demo-note{display:block;margin-top:.9rem;text-align:center;color:var(--text-3);font-size:.82rem}
 
-/* problem */
-.problems{list-style:none;padding:0;margin:2.25rem 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
-.problems li{display:grid;grid-template-columns:2.4rem 1fr;gap:.75rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
-.problems .n{font-family:var(--serif);font-size:1.4rem;color:var(--orange-ink);line-height:1.2}
-.problems b{display:block;color:var(--teal);font-size:1.08rem}
-.problems span{color:var(--ink-2)}
-@media (min-width:860px){.problems{grid-template-columns:1fr 1fr;column-gap:3rem}}
+/* statement */
+.statement{padding-block:clamp(3.5rem,9vw,6rem);border-top:1px solid rgba(120,230,225,.08);border-bottom:1px solid rgba(120,230,225,.08);background:linear-gradient(180deg,var(--night),var(--night-2))}
+.statement p{font-family:var(--display);font-size:clamp(1.7rem,4.4vw,3rem);line-height:1.15;letter-spacing:-.025em;max-width:24ch;color:var(--text-2)}
+.statement p b{color:var(--text);font-weight:600}
+.gaps{display:grid;gap:1.5rem 3rem;margin-top:3rem;color:var(--text-2)}
+.gaps div{padding-left:1rem;border-left:2px solid var(--deep-2)}
+.gaps b{display:block;color:var(--text);font-weight:600;margin-bottom:.2rem}
+@media (min-width:860px){.gaps{grid-template-columns:repeat(3,1fr)}}
 
-/* workflow */
-.flow{list-style:none;padding:0;margin:2.5rem 0 0;counter-reset:s;position:relative}
-.flow li{position:relative;padding:0 0 1.9rem 3.4rem;counter-increment:s}
-.flow li::before{content:counter(s);position:absolute;left:0;top:-.1rem;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--teal);color:var(--on-teal);display:grid;place-items:center;font-weight:700}
-.flow li::after{content:"";position:absolute;left:1.12rem;top:2.4rem;bottom:.2rem;width:2px;background:var(--line)}
-.flow li:last-child::after{display:none}
-.flow li.auto::before{background:var(--orange);color:var(--teal)}
-.flow li.human::before{background:var(--paper);color:var(--teal);border:2px solid var(--teal)}
-.flow b{display:block;color:var(--teal);font-size:1.1rem}
-.flow span{color:var(--ink-2)}
-.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.4rem;font-size:.92rem;color:var(--ink-2)}
-.legend i{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;vertical-align:-.1rem;margin-right:.4rem}
-@media (min-width:960px){
-  .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:1.25rem}
-  .flow li{padding:3.4rem 0 0}
-  .flow li::after{left:2.6rem;right:-1.1rem;top:1.12rem;bottom:auto;width:auto;height:2px}
-}
-.callout{margin-top:2rem;padding:1.1rem 1.25rem;border-left:4px solid var(--orange);background:var(--paper);max-width:46rem}
-.callout b{color:var(--teal)}
+/* story: one call, five moments */
+.story-head{display:grid;gap:1.2rem;align-items:end}
+@media (min-width:960px){.story-head{grid-template-columns:1.1fr .9fr}}
+.track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;margin:3rem 0 2rem}
+.track::before{content:"";position:absolute;left:10%;right:10%;top:22px;height:2px;background:var(--deep-2)}
+.track .fill{position:absolute;left:10%;top:22px;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--saffron));box-shadow:0 0 14px rgba(92,232,225,.6);transition:width .6s ease}
+.stepb{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.7rem;background:none;border:0;color:var(--text-3);font:inherit;font-size:.92rem;font-weight:600;cursor:pointer;padding:0 .2rem;text-align:center}
+.stepb .dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--night);border:2px solid var(--deep-2);color:var(--text-2);font-family:var(--display);font-weight:700;transition:all .35s}
+.stepb[aria-selected="true"]{color:var(--text)}
+.stepb[aria-selected="true"] .dot,.stepb.done .dot{border-color:var(--cyan);color:var(--night);background:var(--cyan);box-shadow:0 0 0 6px rgba(92,232,225,.12),0 0 24px rgba(92,232,225,.5)}
+.stepb.team[aria-selected="true"] .dot{background:var(--saffron);border-color:var(--saffron);box-shadow:0 0 0 6px rgba(240,160,75,.14),0 0 24px rgba(240,160,75,.5)}
+@media (max-width:640px){.stepb span.t{font-size:.78rem}.stepb .dot{width:38px;height:38px}.track::before,.track .fill{top:18px}}
+.stage{display:grid;gap:2rem;align-items:center;min-height:22rem}
+@media (min-width:960px){.stage{grid-template-columns:.85fr 1.15fr;gap:4rem}}
+.panel{display:none}
+.panel.on{display:contents}
+.panel-copy h3{font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.1}
+.panel-copy p{color:var(--text-2);margin-top:.9rem;max-width:30rem}
+.panel-copy .who-does{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;font-size:.9rem;font-weight:600;color:var(--cyan)}
+.panel-copy .who-does.team{color:var(--saffron)}
+.panel-copy .who-does::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
+.glass{border-radius:20px;padding:1.4rem;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.panel.on .glass{animation:rise .5s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sched{display:grid;gap:.5rem}
+.sched div{display:flex;justify-content:space-between;gap:1rem;padding:.75rem .9rem;border-radius:12px;background:rgba(6,20,26,.55);font-size:.95rem}
+.sched span{color:var(--text-2)}
+.sched .now{outline:1px solid var(--cyan);box-shadow:0 0 20px -6px var(--cyan)}
+.form-out{display:grid;gap:.55rem;font-size:.95rem}
+.form-out div{display:flex;justify-content:space-between;gap:1rem;padding:.65rem .9rem;border-radius:12px;background:rgba(6,20,26,.55)}
+.form-out span{color:var(--text-2)}
+.form-out .y{color:var(--saffron);font-weight:600}
+.flagcard{border-radius:16px;padding:1.1rem 1.2rem;background:rgba(255,138,115,.08);border:1px solid rgba(255,138,115,.35)}
+.flagcard b{color:var(--red);display:block;font-size:1.05rem}
+.flagcard p{color:var(--text-2);margin-top:.35rem;font-size:.95rem}
+.flagcard .rule{margin-top:.9rem;font-size:.85rem;color:var(--text-3)}
+.story-note{color:var(--text-3);font-size:.88rem;margin-top:2rem}
 
-/* programmes */
-.prog{display:grid;gap:2.5rem;margin-top:2.5rem}
-.prog h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;padding-bottom:.6rem;border-bottom:2px solid var(--teal)}
-.prog ul{list-style:none;padding:0;margin:0}
-.prog li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
-.prog li span{color:var(--ink)}
-.badge{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;align-self:center}
-.badge.live{background:var(--green-bg);color:var(--green)}
-.badge.next{background:var(--sand-2);color:var(--orange-ink)}
-.prog-note{margin-top:1rem;font-size:.95rem;color:var(--ink-2)}
-@media (min-width:860px){.prog{grid-template-columns:1fr 1fr;gap:3.5rem}}
+/* dashboard showcase */
+.showcase{background:radial-gradient(80% 60% at 50% 0%,rgba(47,184,178,.14),transparent 70%),var(--night-2)}
+.dash{margin-top:3rem;border-radius:22px;border:1px solid var(--glass-line);background:linear-gradient(180deg,rgba(15,58,59,.5),rgba(6,20,26,.9));box-shadow:0 50px 100px -40px rgba(0,0,0,.8);overflow:hidden}
+.dash-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.2rem;border-bottom:1px solid var(--glass-line);font-size:.9rem;color:var(--text-2)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--deep-2)}
+.dash-grid{display:grid;gap:0}
+@media (min-width:980px){.dash-grid{grid-template-columns:1.25fr .75fr}}
+.dash-col{padding:1.3rem}
+.dash-col+.dash-col{border-top:1px solid var(--glass-line)}
+@media (min-width:980px){.dash-col+.dash-col{border-top:0;border-left:1px solid var(--glass-line)}}
+.dash h3{font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:.9rem;letter-spacing:0}
+.filters{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.filters span{font-size:.8rem;padding:.3rem .7rem;border-radius:999px;border:1px solid var(--glass-line);color:var(--text-2)}
+.filters .on{background:var(--cyan);color:var(--night);border-color:var(--cyan);font-weight:700}
+.row{display:grid;grid-template-columns:38px 1fr auto;gap:.8rem;align-items:center;padding:.75rem 0;border-bottom:1px solid rgba(120,230,225,.08)}
+.row:last-child{border-bottom:0}
+.row .ini{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--deep-2);color:var(--text);font-weight:700;font-size:.9rem}
+.row b{display:block;font-weight:600}
+.row small{display:block;color:var(--text-3);font-size:.84rem}
+.pill{font-size:.75rem;font-weight:700;padding:.25rem .6rem;border-radius:999px;white-space:nowrap}
+.p-flag{background:rgba(255,138,115,.14);color:var(--red)}
+.p-miss{background:rgba(240,160,75,.14);color:var(--saffron)}
+.p-due{background:rgba(92,232,225,.12);color:var(--cyan)}
+.p-ok{background:rgba(159,185,182,.12);color:var(--text-2)}
+.bars{display:grid;gap:.7rem;margin-bottom:1.6rem}
+.bars div{display:grid;grid-template-columns:7.5rem 1fr 2rem;gap:.7rem;align-items:center;font-size:.88rem;color:var(--text-2)}
+.bars em{display:block;height:8px;border-radius:6px;background:var(--deep-2);overflow:hidden;font-style:normal}
+.bars em i{display:block;height:100%;border-radius:6px}
+.bars b{color:var(--text);text-align:right;font-weight:600}
+.tl{list-style:none;padding:0;margin:0;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--deep-2)}
+.tl li{position:relative;padding:0 0 1rem 1.7rem;font-size:.9rem;color:var(--text-2)}
+.tl li::before{content:"";position:absolute;left:1px;top:.4rem;width:14px;height:14px;border-radius:50%;background:var(--night);border:2px solid var(--cyan)}
+.tl li.f::before{border-color:var(--red)}
+.tl b{color:var(--text);font-weight:600;display:block}
+.dash-foot{padding:.8rem 1.2rem;border-top:1px solid var(--glass-line);color:var(--text-3);font-size:.84rem}
+.caps{display:grid;gap:1rem 2.5rem;margin-top:2.5rem;color:var(--text-2)}
+.caps b{color:var(--text);font-weight:600}
+@media (min-width:860px){.caps{grid-template-columns:repeat(3,1fr)}}
 
-/* product section */
-.prod-grid{display:grid;gap:2.5rem;margin-top:2.5rem;align-items:start}
-.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.panel-h{display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;border-bottom:1px solid var(--line);background:var(--sand)}
-.panel-h b{color:var(--teal)}
-.panel-h small{color:var(--ink-2);font-size:.8rem}
-.tbl{width:100%;border-collapse:collapse;font-size:.92rem}
-.tbl th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);font-weight:700;padding:.65rem 1.1rem;border-bottom:1px solid var(--line)}
-.tbl td{padding:.75rem 1.1rem;border-bottom:1px solid #EFE4D4;vertical-align:top}
-.tbl tr:last-child td{border-bottom:0}
-.tbl td small{display:block;color:var(--ink-2);font-size:.8rem}
-.hide-sm{display:none}
-@media (min-width:700px){.hide-sm{display:table-cell}}
-.transcript{padding:1rem 1.1rem;display:grid;gap:.7rem}
-.bub{max-width:88%;padding:.6rem .8rem;border-radius:12px;font-size:.92rem}
-.bub.ai{background:var(--sand);border-bottom-left-radius:4px}
-.bub.mo{background:var(--teal);color:var(--on-teal);margin-left:auto;border-bottom-right-radius:4px}
-.bub .hi{font-family:var(--hi);display:block}
-.bub small{display:block;opacity:.8;font-size:.78rem;margin-top:2px}
-.captured{border-top:1px solid var(--line);padding:1rem 1.1rem;display:grid;gap:.5rem;font-size:.92rem}
-.captured div{display:flex;justify-content:space-between;gap:1rem}
-.captured span{color:var(--ink-2)}
-.flagbox{margin:0 1.1rem 1.1rem;padding:.75rem .9rem;border-radius:10px;background:var(--red-bg);color:var(--red);font-size:.9rem;font-weight:600}
-.feat{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
-.feat li{padding-left:1.6rem;position:relative;color:var(--ink-2)}
-.feat li::before{content:"";position:absolute;left:0;top:.55rem;width:.6rem;height:.6rem;border-radius:2px;background:var(--orange)}
-.feat b{color:var(--teal)}
-.ill-note{font-size:.85rem;color:var(--ink-2);margin-top:1rem}
-@media (min-width:960px){.prod-grid{grid-template-columns:1.15fr .85fr}}
+/* pathway */
+.path{position:relative;margin-top:3.5rem;display:grid;gap:2.5rem}
+@media (min-width:960px){.path{grid-template-columns:repeat(3,1fr);gap:0}}
+.leg{position:relative;padding:0 0 0 1.6rem;border-left:2px solid var(--deep-2)}
+@media (min-width:960px){.leg{padding:2.2rem 2rem 0 0;border-left:0;border-top:2px solid var(--deep-2)}}
+.leg.mid{border-color:var(--saffron-dim)}
+.leg::before{content:"";position:absolute;left:-8px;top:0;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 16px var(--cyan)}
+@media (min-width:960px){.leg::before{left:0;top:-8px}}
+.leg.mid::before{background:var(--saffron);box-shadow:0 0 16px var(--saffron)}
+.leg h3{font-size:1.6rem}
+.leg .when{color:var(--text-3);font-size:.9rem;margin-top:.2rem}
+.leg ul{list-style:none;padding:0;margin:1.1rem 0 0;display:grid;gap:.55rem}
+.leg li{display:flex;justify-content:space-between;gap:1rem;color:var(--text-2);font-size:.97rem}
+.tag{flex:none;font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;align-self:center}
+.tag.live{background:rgba(92,232,225,.12);color:var(--cyan)}
+.tag.next{background:rgba(159,185,182,.1);color:var(--text-3)}
+.later{margin-top:2.5rem;color:var(--text-3);font-size:.95rem;max-width:44rem}
+.later b{color:var(--text-2)}
 
-/* value */
-.value{display:grid;gap:2rem;margin-top:2.5rem}
-.value h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;margin-bottom:.8rem}
-.value ul{margin:0;padding-left:1.15rem;color:var(--ink-2)}
-.value li{margin-bottom:.45rem}
-@media (min-width:860px){.value{grid-template-columns:repeat(3,1fr);gap:3rem}.value>div{border-top:2px solid var(--teal);padding-top:1.1rem}}
-@media (max-width:859px){.value>div{border-top:2px solid var(--teal);padding-top:1rem}}
+/* safety split */
+.split{display:grid;gap:3rem}
+@media (min-width:960px){.split{grid-template-columns:.8fr 1.2fr;gap:5rem}}
+.rules{list-style:none;padding:0;margin:0}
+.rules li{display:grid;grid-template-columns:1fr;padding:1.1rem 0;border-bottom:1px solid rgba(120,230,225,.1)}
+.rules li:first-child{border-top:1px solid rgba(120,230,225,.1)}
+.rules b{font-weight:600}
+.rules span{color:var(--text-2);font-size:.97rem}
+.fine{color:var(--text-3);font-size:.88rem;margin-top:1.4rem}
 
-/* safety */
-.rules{list-style:none;padding:0;margin:2.5rem 0 0;display:grid;gap:0}
-.rules li{display:grid;grid-template-columns:2rem 1fr;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--line-teal)}
-.rules li::before{content:"";width:1.4rem;height:1.4rem;margin-top:.15rem;border-radius:50%;border:2px solid var(--orange);background:radial-gradient(circle,var(--orange) 0 35%,transparent 38%)}
-.rules b{display:block;color:var(--on-teal)}
-.rules span{color:var(--on-teal-2)}
-@media (min-width:860px){.rules{grid-template-columns:1fr 1fr;column-gap:3rem}}
-.disc{margin-top:1.75rem;font-size:.92rem;color:var(--on-teal-2);max-width:44rem}
-
-/* pilot */
-.pilot-grid{display:grid;gap:2.5rem;margin-top:2.25rem}
-.steps{list-style:none;padding:0;margin:0}
-.steps li{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
-.steps .w{font-weight:700;color:var(--orange-ink);font-size:.92rem;letter-spacing:.02em}
-.steps b{display:block;color:var(--teal)}
-.steps span{color:var(--ink-2)}
-.terms{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
-.terms h3{margin-bottom:.8rem}
-.terms ul{margin:0;padding-left:1.15rem;color:var(--ink-2)}
-.terms li{margin-bottom:.5rem}
-.terms li b{color:var(--teal)}
-@media (min-width:900px){.pilot-grid{grid-template-columns:1.2fr .8fr;gap:4rem}}
-
-/* about */
-.about{display:grid;gap:2rem;margin-top:2rem;align-items:start}
+/* pilot + about */
+.pilot{background:linear-gradient(180deg,var(--night-2),var(--night))}
+.steps{list-style:none;padding:0;margin:2.5rem 0 0;counter-reset:s;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.15rem 0;border-bottom:1px solid rgba(120,230,225,.1)}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:1.6rem;font-weight:600;color:var(--cyan);line-height:1.1}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--text-2)}
+.terms{border-radius:20px;padding:1.6rem;background:var(--glass);border:1px solid var(--glass-line)}
+.terms h3{font-size:1.35rem;margin-bottom:1rem}
+.terms ul{list-style:none;padding:0;margin:0;display:grid;gap:.7rem}
+.terms li{display:flex;gap:.7rem;color:var(--text-2)}
+.terms li::before{content:"";flex:none;width:8px;height:8px;margin-top:.55rem;border-radius:50%;background:var(--cyan)}
+.terms li b{color:var(--text);font-weight:600}
+.about{margin-top:5rem;display:grid;gap:2rem;padding-top:3rem;border-top:1px solid rgba(120,230,225,.1)}
+@media (min-width:960px){.about{grid-template-columns:.8fr 1.2fr;gap:5rem}}
+.about h3{font-size:1.7rem}
+.about p{color:var(--text-2);max-width:40rem}
 .about p+p{margin-top:1rem}
-.about p{color:var(--ink-2);max-width:40rem}
-.facts{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
-.facts li{padding:.85rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem}
-.facts span{color:var(--ink-2)}
-.facts b{color:var(--teal);text-align:right}
-@media (min-width:900px){.about{grid-template-columns:1.2fr .8fr;gap:4rem}}
 
-/* request */
-.req-grid{display:grid;gap:2.5rem;margin-top:.5rem}
-@media (min-width:960px){.req-grid{grid-template-columns:.9fr 1.1fr;gap:4rem}}
-.form-card{background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(1.25rem,3vw,2rem)}
-.form-grid{display:grid;gap:1rem}
-@media (min-width:640px){.form-grid{grid-template-columns:1fr 1fr}.f.wide{grid-column:1/-1}}
-.f label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.35rem;color:var(--teal)}
-.f .opt{font-weight:400;color:var(--ink-2)}
-.f input,.f select,.f textarea{width:100%;min-height:48px;padding:.65rem .8rem;border:1.5px solid #CDBCA4;border-radius:10px;font:inherit;font-size:1rem;background:#fff;color:var(--ink)}
-.f textarea{min-height:96px;resize:vertical}
-.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid var(--orange);outline-offset:1px;border-color:var(--teal)}
+/* final cta + form */
+.final{position:relative;overflow:hidden;isolation:isolate}
+.final::before{content:"";position:absolute;right:-10%;top:-30%;width:60vw;height:60vw;max-width:780px;max-height:780px;background:radial-gradient(closest-side,rgba(47,184,178,.22),transparent 70%);z-index:-1}
+.final-grid{display:grid;gap:3rem}
+@media (min-width:980px){.final-grid{grid-template-columns:.95fr 1.05fr;gap:4.5rem}}
+.final h2{font-size:clamp(2.2rem,5.6vw,3.8rem);max-width:16ch}
+.form{border-radius:22px;padding:clamp(1.3rem,3vw,2rem);background:rgba(10,30,37,.85);border:1px solid var(--glass-line);box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.fg{display:grid;gap:1rem}
+@media (min-width:640px){.fg{grid-template-columns:1fr 1fr}.f.wide{grid-column:1/-1}}
+.f label{display:block;font-weight:600;font-size:.93rem;margin-bottom:.35rem;color:var(--text)}
+.f .opt{font-weight:400;color:var(--text-3)}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:.7rem .9rem;border:1px solid rgba(120,230,225,.22);border-radius:12px;font:inherit;font-size:1rem;background:rgba(6,20,26,.7);color:var(--text)}
+.f select{appearance:auto}
+.f textarea{min-height:100px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:transparent}
 .f .err{display:none;color:var(--red);font-size:.85rem;margin-top:.3rem;font-weight:600}
-.f.bad .err{display:block}
-.f.bad input,.f.bad select{border-color:var(--red)}
-.form-card .btn-primary{width:100%;margin-top:1.25rem}
-.small{font-size:.88rem;color:var(--ink-2);margin-top:.85rem}
-.sent{text-align:center;padding:1rem 0}
-.sent h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin-bottom:.5rem}
-.sent pre{text-align:left;white-space:pre-wrap;background:var(--sand);border-radius:10px;padding:.9rem;font-size:.85rem;font-family:inherit;margin:1rem 0 0}
+.f.bad .err{display:block} .f.bad input,.f.bad select{border-color:var(--red)}
+.form .btn-glow{width:100%;margin-top:1.3rem}
+.small{font-size:.87rem;color:var(--text-3);margin-top:.9rem}
+.sent h3{font-size:1.5rem}
+.sent p{color:var(--text-2);margin-top:.6rem}
+.sent pre{white-space:pre-wrap;background:rgba(6,20,26,.7);border:1px solid var(--glass-line);border-radius:12px;padding:1rem;font-family:inherit;font-size:.9rem;color:var(--text-2);margin:1rem 0 0}
 
-footer{background:#0F2C2C;color:var(--on-teal-2);padding-block:2.25rem;font-size:.93rem}
+footer{border-top:1px solid rgba(120,230,225,.1);padding-block:2.4rem;color:var(--text-3);font-size:.93rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem}
-footer a{color:var(--on-teal)}
-footer b{color:var(--on-teal);font-family:var(--serif);font-weight:600;font-size:1.05rem}
+footer b{color:var(--text);font-family:var(--display)}
+footer a{color:var(--text-2)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .wave span{height:var(--h,40%)}
+  .line,.chip{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -261,297 +283,283 @@ footer b{color:var(--on-teal);font-family:var(--serif);font-weight:600;font-size
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Suraksha Sathi home">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#E3923A"/><path d="M16 8.5c-3.6 0-6.5 2.7-6.5 6.2 0 4.6 6.5 9.3 6.5 9.3s6.5-4.7 6.5-9.3c0-3.5-2.9-6.2-6.5-6.2z" fill="#173E3E"/><circle cx="16" cy="14.4" r="2.4" fill="#FAF5EE"/></svg>
+      <svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5CE8E1"/><stop offset="1" stop-color="#2FB8B2"/></linearGradient></defs><circle cx="17" cy="17" r="16" fill="none" stroke="url(#mg)" stroke-width="1.6"/><g fill="#5CE8E1"><rect x="8.5" y="14" width="2.4" height="6" rx="1.2"/><rect x="12.6" y="10.5" width="2.4" height="13" rx="1.2"/><rect x="16.7" y="8" width="2.4" height="18" rx="1.2"/><rect x="20.8" y="11.5" width="2.4" height="11" rx="1.2" fill="#F0A04B"/><rect x="24.9" y="14.5" width="2.4" height="5" rx="1.2" fill="#F0A04B"/></g></svg>
       <span><b>Suraksha Sathi</b><small>सुरक्षा साथी</small></span>
     </a>
-    <nav class="links" aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#product">Product</a>
-      <a href="#safety">Safety</a>
-      <a href="#pilot">Pilot</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#story">How it works</a><a href="#product">Product</a><a href="#safety">Safety</a><a href="#pilot">Pilot</a>
     </nav>
-    <a class="btn btn-primary" href="#request">Book a demo</a>
+    <a class="btn btn-glow" href="#request">Book a <span class="long">hospital </span>pilot</a>
   </div>
 </header>
 
 <main id="main">
 
 <!-- HERO -->
-<section class="hero" aria-labelledby="h-hero">
+<section class="hero" aria-labelledby="h1">
+  <svg class="net" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g stroke="rgba(92,232,225,.16)" stroke-width="1" fill="none">
+      <path d="M640 120 L820 210 L1010 140 L1120 300 M820 210 L760 400 L950 470 L1100 610 M760 400 L620 560 M950 470 L1010 140"/>
+    </g>
+    <g fill="rgba(92,232,225,.5)"><circle cx="640" cy="120" r="2.5"/><circle cx="820" cy="210" r="3"/><circle cx="1010" cy="140" r="2.5"/><circle cx="1120" cy="300" r="2"/><circle cx="760" cy="400" r="3"/><circle cx="950" cy="470" r="2.5"/><circle cx="1100" cy="610" r="2"/><circle cx="620" cy="560" r="2.5"/></g>
+  </svg>
   <div class="wrap hero-grid">
     <div>
-      <span class="tag">Maternal and infant follow-up for hospitals</span>
-      <h1 id="h-hero">Every mother deserves follow-up. Every baby deserves attention.</h1>
-      <p class="lede">Suraksha Sathi is your clinic's care companion. It keeps your hospital connected with mothers and families through scheduled Hindi voice calls, captured responses and concerns flagged to your team, from pregnancy to the baby's vaccines.</p>
-      <p class="hi-line" lang="hi">हर माँ और बच्चे के लिए आपके क्लिनिक का देखभाल साथी</p>
+      <h1 id="h1">Every mother deserves care beyond the consultation.</h1>
+      <p class="lede">AI voice conversations that help hospitals stay connected with mothers and babies from pregnancy through birth to the baby's vaccinations.</p>
+      <p class="tagline" lang="hi">हर माँ और बच्चे के लिए आपके क्लिनिक का देखभाल साथी</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="#request">Book a hospital demo</a>
-        <a class="btn btn-line" href="#how">See how it works</a>
+        <a class="btn btn-glow" href="#request">Book a hospital pilot</a>
+        <a class="btn btn-ghost" href="#story">See a call unfold</a>
       </div>
-      <p class="hero-note"><span>You sign off every script</span><span>No fee during the pilot</span><span>Stop at any time</span></p>
+      <p class="assure"><span>Your doctor signs off every script</span><span>Hindi voice calls</span><span>No fee during the pilot</span></p>
     </div>
+
     <div>
-      <div class="device" role="img" aria-label="Illustrative preview of the Suraksha Sathi daily list on a phone: one flagged concern, one missed scan, one vaccine due today and one call completed.">
-        <div class="screen" aria-hidden="true">
-          <div class="scr-head">
-            <div class="row"><b>Needs attention today</b><span class="date">Tue, 10 Nov</span></div>
-            <div class="chips"><span class="chip on">All 4</span><span class="chip">Flagged 1</span><span class="chip">Missed 1</span><span class="chip">Due 1</span></div>
-          </div>
-          <div class="pt"><span class="av">R</span><span><b>Rekha D.</b><small>Pregnancy, week 34 · raised a concern</small></span><span class="st flag">Flagged</span></div>
-          <div class="pt"><span class="av">K</span><span><b>Kavita M.</b><small>Growth scan · 2 calls unanswered</small></span><span class="st miss">Missed</span></div>
-          <div class="pt"><span class="av">P</span><span><b>Priya S.</b><small>Baby · 10-week vaccine due today</small></span><span class="st due">Due</span></div>
-          <div class="pt"><span class="av">S</span><span><b>Seema K.</b><small>Baby · reminder confirmed by husband</small></span><span class="st ok">Done</span></div>
-          <div class="scr-call">
-            <span class="lab">Latest call · Rekha D.</span>
-            <p class="q">"पैरों में बहुत सूजन है, और सिर में दर्द रहता है।"</p>
-            <p class="tr">"My feet are very swollen and I keep getting headaches."</p>
-            <div class="resp"><span class="st flag">Flagged by protocol</span><span class="st due">For clinical review</span></div>
-          </div>
+      <div class="console" id="console" role="img" aria-label="Demonstration of a Suraksha Sathi call. The AI greets the mother in Hindi on behalf of her hospital, she reports swelling and headaches, her answers are captured and the concern is flagged for clinical review.">
+        <div class="console-top" aria-hidden="true">
+          <div class="who"><span class="av">R</span><span><b>Rekha D.</b>Pregnancy, week 34</span></div>
+          <span class="status"><i></i><span id="c-status">AI speaking</span></span>
+        </div>
+        <div class="wave" id="wave" aria-hidden="true"></div>
+        <div class="lines" aria-hidden="true">
+          <p class="line ai" data-s="0"><span class="hi" lang="hi">नमस्ते रेखा जी, मैं आपके अस्पताल की ओर से बोल रही हूँ। आप कैसी हैं?</span><small>Hello Rekha ji, I'm calling for your hospital. How are you?</small></p>
+          <p class="line mo" data-s="1"><span class="hi" lang="hi">पैरों में सूजन है, और सिर में दर्द रहता है।</span><small>My feet are swollen and I keep getting headaches.</small></p>
+        </div>
+        <div class="chips" aria-hidden="true">
+          <span class="chip cap" data-s="2">Swelling: reported</span>
+          <span class="chip cap" data-s="2">Headache: reported</span>
+          <span class="chip flag" data-s="3">Flagged by protocol · for clinical review</span>
         </div>
       </div>
-      <span class="illus">Illustrative data · sample names</span>
+      <span class="demo-note">Demonstration with sample data. Not a live patient.</span>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="band" aria-labelledby="h-problem">
+<!-- STATEMENT -->
+<section class="statement" aria-label="The problem">
   <div class="wrap">
-    <span class="eyebrow">The problem</span>
-    <h2 id="h-problem">Care cannot end when a mother leaves the hospital.</h2>
-    <p class="lede">Between visits, mothers are on their own, and staff have little time to keep track of every one of them.</p>
-    <ul class="problems">
-      <li><span class="n">01</span><div><b>Contact drops after the visit</b><span>Once she leaves, there is often no routine way to check how she and the baby are doing.</span></div></li>
-      <li><span class="n">02</span><div><b>Milestones slip</b><span>Check-ups, scans and vaccine doses are easy to miss when everything lives on paper and memory.</span></div></li>
-      <li><span class="n">03</span><div><b>Many families don't use apps</b><span>SMS and app reminders don't reach mothers who don't read or don't use a smartphone.</span></div></li>
-      <li><span class="n">04</span><div><b>Staff ring round by hand</b><span>Reception spends hours on repeat phone calls that could go to mothers who need a person.</span></div></li>
-      <li><span class="n">05</span><div><b>Worries go unheard</b><span>A concern a mother mentions on the phone is easy to lose before it reaches anyone clinical.</span></div></li>
-      <li><span class="n">06</span><div><b>No clear view</b><span>It is hard to see who has been contacted, who hasn't, and who needs attention today.</span></div></li>
-    </ul>
+    <p>Between visits, a mother is on her own. <b>A missed scan, a late vaccine or a worry she mentions once can slip past even a careful team.</b></p>
+    <div class="gaps">
+      <div><b>Contact drops after the visit</b>There's rarely a routine way to check how mother and baby are doing.</div>
+      <div><b>Staff ring round by hand</b>Reception spends hours on repeat calls, often in between patients.</div>
+      <div><b>Many families don't use apps</b>A phone call in Hindi reaches mothers that SMS and apps don't.</div>
+    </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="band sand" id="how" aria-labelledby="h-how">
+<!-- STORY -->
+<section class="sec" id="story" aria-labelledby="h-story">
   <div class="wrap">
-    <span class="eyebrow">How it works</span>
-    <h2 id="h-how">From enrolment to your team's daily list.</h2>
-    <ol class="flow">
-      <li class="human"><b>Enrol</b><span>Reception adds the mother in about 30 seconds and records her consent.</span></li>
-      <li class="auto"><b>Call</b><span>Suraksha Sathi calls on schedule in Hindi, 10am–7pm, with one retry, then WhatsApp.</span></li>
-      <li class="auto"><b>Respond</b><span>The mother answers. A husband or close family member can take a reminder.</span></li>
-      <li class="auto"><b>Capture</b><span>Answers are recorded and structured against the questions you approved.</span></li>
-      <li class="auto"><b>Flag</b><span>Reported warning signs are flagged using your doctor-approved protocol.</span></li>
-      <li class="human"><b>Review</b><span>Flags, missed calls and outcomes appear on your list. Your team decides what to do.</span></li>
-    </ol>
-    <div class="legend"><span><i style="background:var(--orange)"></i>Automated by Suraksha Sathi</span><span><i style="background:var(--paper);border:2px solid var(--teal)"></i>Done by your team</span></div>
-    <p class="callout"><b>Flagging is not clinical review.</b> Suraksha Sathi only follows the protocol you approve and puts concerns in front of your team. It does not diagnose, decide or promise a callback. Clinical judgement stays with you.</p>
-  </div>
-</section>
-
-<!-- PROGRAMMES -->
-<section class="band" aria-labelledby="h-prog">
-  <div class="wrap">
-    <span class="eyebrow">Care programmes</span>
-    <h2 id="h-prog">One record, from pregnancy to the baby's vaccines.</h2>
-    <p class="lede">Each mother has a single record. When the baby's birth date is entered, she moves from the pregnancy programme to the baby's vaccine schedule.</p>
-    <div class="prog">
+    <div class="story-head">
       <div>
-        <h3>Maternal care</h3>
-        <ul>
-          <li><span>Calls before antenatal check-ups and scans</span><em class="badge live">Live</em></li>
-          <li><span>Maternal check-in calls</span><em class="badge next">Coming next</em></li>
-          <li><span>Postnatal follow-up</span><em class="badge next">Coming next</em></li>
-          <li><span>Reported concerns captured and flagged</span><em class="badge live">Live</em></li>
-        </ul>
+        <span class="kicker">How it works</span>
+        <h2 id="h-story">One call, from her phone to your team's list.</h2>
       </div>
-      <div>
-        <h3>Infant care</h3>
-        <ul>
-          <li><span>Vaccine calls on your clinic's own schedule</span><em class="badge live">Live</em></li>
-          <li><span>Follow-up after a missed dose</span><em class="badge live">Live</em></li>
-          <li><span>WhatsApp follow-up where the mother agrees</span><em class="badge live">Live</em></li>
-          <li><span>Responses and concerns captured</span><em class="badge live">Live</em></li>
-        </ul>
+      <p class="lede" style="margin-top:0">Follow a single call through Suraksha Sathi. The AI does the reaching and recording. Your team does the deciding.</p>
+    </div>
+
+    <div class="track" role="tablist" aria-label="Steps of a call">
+      <span class="fill" id="fill" aria-hidden="true"></span>
+      <button class="stepb" role="tab" id="t0" aria-controls="p0" aria-selected="true"><span class="dot">1</span><span class="t">Scheduled</span></button>
+      <button class="stepb" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><span class="dot">2</span><span class="t">Conversation</span></button>
+      <button class="stepb" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="dot">3</span><span class="t">Captured</span></button>
+      <button class="stepb" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="dot">4</span><span class="t">Flagged</span></button>
+      <button class="stepb team" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><span class="dot">5</span><span class="t">Your team</span></button>
+    </div>
+
+    <div class="stage">
+      <div class="panel on" id="p0" role="tabpanel" aria-labelledby="t0">
+        <div class="panel-copy"><h3>The call is planned from her dates.</h3><p>Reception enrols her in about 30 seconds and records her consent. From her due date, or her baby's birth date, Suraksha Sathi schedules each call against your clinic's own schedule.</p><span class="who-does">Automated</span></div>
+        <div class="glass"><div class="sched"><div><span>Mon</span>Antenatal check-up reminder</div><div class="now"><span>Today, 10:00</span>Week 34 check-in call</div><div><span>Thu</span>Growth scan reminder</div><div><span>If unanswered</span>One retry at 5pm, then WhatsApp</div></div></div>
+      </div>
+      <div class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+        <div class="panel-copy"><h3>She hears her hospital, in Hindi.</h3><p>A friendly AI voice speaks on your hospital's behalf, between 10am and 7pm, using only the script your doctor approved. A husband can take a reminder; questions about her own health are for her.</p><span class="who-does">Automated</span></div>
+        <div class="glass"><div class="lines" style="min-height:0"><p class="line ai on"><span class="hi" lang="hi">नमस्ते रेखा जी, मैं आपके अस्पताल की ओर से बोल रही हूँ। आप कैसी हैं?</span><small>Hello Rekha ji, I'm calling for your hospital. How are you?</small></p><p class="line mo on"><span class="hi" lang="hi">पैरों में सूजन है, और सिर में दर्द रहता है।</span><small>My feet are swollen and I keep getting headaches.</small></p><p class="line ai on"><span class="hi" lang="hi">मैं यह बात अस्पताल की टीम तक पहुँचा देती हूँ।</span><small>I'll pass this to the hospital team.</small></p></div></div>
+      </div>
+      <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2">
+        <div class="panel-copy"><h3>Her answers become structured data.</h3><p>What she says is recorded against the questions you approved, so your team sees answers, not a recording to listen through.</p><span class="who-does">Automated</span></div>
+        <div class="glass"><div class="form-out"><div><span>Feeling well</span>No</div><div><span>Swelling</span><b class="y">Reported</b></div><div><span>Headache</span><b class="y">Reported</b></div><div><span>Thursday check-up</span>Confirmed</div><div><span>Answered by</span>Mother</div></div></div>
+      </div>
+      <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3">
+        <div class="panel-copy"><h3>Warning signs are flagged by your protocol.</h3><p>Suraksha Sathi compares her answers with the warning signs your doctor set. It flags, it never diagnoses, and it never tells her what to do medically.</p><span class="who-does">Automated, by your rules</span></div>
+        <div class="glass"><div class="flagcard"><b>Flagged: swelling with headache</b><p>Rekha D. · Pregnancy, week 34 · reported on today's call</p><p class="rule">Matched rule set by your doctor. Waiting for clinical review.</p></div></div>
+      </div>
+      <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4">
+        <div class="panel-copy"><h3>It lands on your list. You decide.</h3><p>Flags, missed calls and due visits sit at the top of your team's daily list. What happens next is a clinical decision, and it stays with you.</p><span class="who-does team">Your team</span></div>
+        <div class="glass"><div class="sched"><div class="now"><span style="color:var(--red)">Flagged</span>Rekha D. · swelling with headache</div><div><span style="color:var(--saffron)">Missed</span>Kavita M. · growth scan, 2 calls</div><div><span style="color:var(--cyan)">Due today</span>Priya S. · 10-week vaccine</div></div></div>
       </div>
     </div>
-    <p class="prog-note"><b>Coming next:</b> enrolment from a photo of her existing card, doctors listening to or starting a call from the app, an AI summary on each patient card, and more languages such as Punjabi.</p>
+    <p class="story-note">This is a demonstration using sample data. Names and calls are not real.</p>
   </div>
 </section>
 
 <!-- PRODUCT -->
-<section class="band sand" id="product" aria-labelledby="h-product">
+<section class="sec showcase" id="product" aria-labelledby="h-product">
   <div class="wrap">
-    <span class="eyebrow">The product</span>
-    <h2 id="h-product">What your team sees each morning.</h2>
-    <p class="lede">A simple app that works on a phone or tablet. One list shows who is due, who hasn't answered and who has raised a concern, with every call outcome on the mother's record.</p>
-    <div class="prod-grid">
-      <div class="panel">
-        <div class="panel-h"><b>Follow-ups this week</b><small>Illustrative data</small></div>
-        <table class="tbl">
-          <thead><tr><th scope="col">Mother</th><th scope="col">Next step</th><th scope="col" class="hide-sm">Last call</th><th scope="col">Status</th></tr></thead>
-          <tbody>
-            <tr><td><b>Rekha D.</b><small>Pregnancy · wk 34</small></td><td>Antenatal check-up<small>Thu</small></td><td class="hide-sm">Answered<small>Concern reported</small></td><td><span class="st flag">Flagged</span></td></tr>
-            <tr><td><b>Kavita M.</b><small>Pregnancy · wk 28</small></td><td>Growth scan<small>Overdue 3 days</small></td><td class="hide-sm">No answer ×2<small>WhatsApp sent</small></td><td><span class="st miss">Missed</span></td></tr>
-            <tr><td><b>Priya S.</b><small>Baby · 9 wks</small></td><td>10-week vaccine<small>Today</small></td><td class="hide-sm">Answered<small>Confirmed</small></td><td><span class="st due">Due</span></td></tr>
-            <tr><td><b>Anita R.</b><small>Baby · 14 wks</small></td><td>14-week vaccine<small>Done</small></td><td class="hide-sm">Answered<small>No concerns</small></td><td><span class="st ok">Done</span></td></tr>
-          </tbody>
-        </table>
-        <div class="transcript" aria-label="Illustrative call extract">
-          <div class="bub ai"><span class="hi" lang="hi">नमस्ते, मैं आपके अस्पताल की ओर से बोल रही हूँ। आप और बच्चा कैसे हैं?</span><small>Hello, I'm calling on behalf of your hospital. How are you and the baby?</small></div>
-          <div class="bub mo"><span class="hi" lang="hi">पैरों में बहुत सूजन है, सिर में दर्द रहता है।</span><small>My feet are very swollen and I keep getting headaches.</small></div>
-          <div class="bub ai"><span class="hi" lang="hi">मैं यह बात अस्पताल की टीम तक पहुँचा देती हूँ।</span><small>I'll pass this to the hospital team.</small></div>
+    <span class="kicker">The product</span>
+    <h2 id="h-product">Every mother, every call, one view.</h2>
+    <p class="lede">A simple app for a phone or tablet. Your team sees who is due, who hasn't answered and who has raised a concern, without ringing round.</p>
+
+    <div class="dash" role="img" aria-label="Illustrative Suraksha Sathi dashboard with sample data: a needs-attention list, a breakdown of this week's call outcomes, and a timeline for one mother.">
+      <div class="dash-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>Needs attention today</span><span>Illustrative data</span></div>
+      <div class="dash-grid" aria-hidden="true">
+        <div class="dash-col">
+          <div class="filters"><span class="on">All</span><span>Flagged</span><span>Missed</span><span>Due</span><span>Pregnancy</span><span>Baby</span></div>
+          <div class="row"><span class="ini">R</span><span><b>Rekha D.</b><small>Pregnancy · week 34 · swelling with headache</small></span><span class="pill p-flag">Flagged</span></div>
+          <div class="row"><span class="ini">K</span><span><b>Kavita M.</b><small>Pregnancy · growth scan · 2 calls unanswered, WhatsApp sent</small></span><span class="pill p-miss">Missed</span></div>
+          <div class="row"><span class="ini">P</span><span><b>Priya S.</b><small>Baby · 10-week vaccine · confirmed on call</small></span><span class="pill p-due">Due today</span></div>
+          <div class="row"><span class="ini">A</span><span><b>Anita R.</b><small>Baby · 14-week vaccine · confirmed by husband</small></span><span class="pill p-due">Due today</span></div>
+          <div class="row"><span class="ini">S</span><span><b>Seema K.</b><small>Pregnancy · check-up attended</small></span><span class="pill p-ok">Done</span></div>
         </div>
-        <div class="captured">
-          <div><span>Swelling</span><b>Yes, reported</b></div>
-          <div><span>Headache</span><b>Yes, reported</b></div>
-          <div><span>Next visit</span><b>Thursday, confirmed</b></div>
+        <div class="dash-col">
+          <h3>This week's calls</h3>
+          <div class="bars">
+            <div>Answered<em><i style="width:72%;background:var(--cyan)"></i></em><b>36</b></div>
+            <div>Retried<em><i style="width:18%;background:var(--cyan-dim)"></i></em><b>9</b></div>
+            <div>WhatsApp sent<em><i style="width:10%;background:var(--saffron)"></i></em><b>5</b></div>
+            <div>Concerns flagged<em><i style="width:6%;background:var(--red)"></i></em><b>3</b></div>
+          </div>
+          <h3>Rekha D. · timeline</h3>
+          <ul class="tl">
+            <li><b>Week 28</b>Enrolled with consent</li>
+            <li><b>Week 30</b>Scan reminder · answered</li>
+            <li class="f"><b>Today</b>Check-in · concern flagged</li>
+            <li><b>Thursday</b>Antenatal check-up</li>
+          </ul>
         </div>
-        <p class="flagbox">Flagged by your protocol: swelling with headache. Waiting for clinical review.</p>
       </div>
-      <div>
-        <ul class="feat">
-          <li><b>Patient list.</b> Every enrolled mother, her stage and her next step.</li>
-          <li><b>Scheduled follow-ups.</b> Calls are planned from her due date or the baby's birth date and your schedule.</li>
-          <li><b>Call outcomes.</b> Answered, unanswered, retried and WhatsApp sent, all visible.</li>
-          <li><b>Captured responses.</b> Answers recorded against your approved questions.</li>
-          <li><b>Flagged concerns.</b> Warning signs from your protocol go to the top of the list.</li>
-          <li><b>Vaccine tracking.</b> Each baby follows your clinic's own schedule.</li>
-        </ul>
-        <p class="ill-note">All names, dates and calls on this page are illustrative sample data, not real patients.</p>
-      </div>
+      <p class="dash-foot">Illustrative data. Sample names and numbers, not results from any hospital.</p>
+    </div>
+
+    <div class="caps">
+      <p><b>Scheduled follow-up.</b> Calls planned from her dates and your clinic's own schedule.</p>
+      <p><b>Call outcomes.</b> Answered, retried and WhatsApp sent, all visible.</p>
+      <p><b>Flagged concerns.</b> Warning signs from your protocol go to the top.</p>
     </div>
   </div>
 </section>
 
-<!-- VALUE -->
-<section class="band" aria-labelledby="h-value">
+<!-- PATHWAY -->
+<section class="sec" aria-labelledby="h-path">
   <div class="wrap">
-    <span class="eyebrow">Value for doctors and hospitals</span>
-    <h2 id="h-value">More organised follow-up. Less manual coordination.</h2>
-    <div class="value">
-      <div>
-        <h3>For your staff</h3>
-        <ul><li>Fewer repetitive reminder calls</li><li>Unanswered calls visible, not forgotten</li><li>Enrolment in about 30 seconds at the desk</li></ul>
+    <span class="kicker">Care pathway</span>
+    <h2 id="h-path">One record, from pregnancy to the baby's last vaccine.</h2>
+    <p class="lede">When the baby's birth date is entered, the same record moves to your vaccine schedule. Nothing is re-entered.</p>
+    <div class="path">
+      <div class="leg">
+        <h3>Pregnancy</h3><p class="when">From her due date</p>
+        <ul><li>Antenatal check-up and scan calls<em class="tag live">Live</em></li><li>Concerns captured and flagged<em class="tag live">Live</em></li><li>Maternal check-in calls<em class="tag next">Next</em></li></ul>
       </div>
-      <div>
-        <h3>For your clinical team</h3>
-        <ul><li>Patient-reported information captured</li><li>Concerns flagged using your protocol</li><li>One list of who needs attention today</li></ul>
+      <div class="leg mid">
+        <h3>Birth</h3><p class="when">Birth date entered</p>
+        <ul><li>Record moves to the baby's schedule<em class="tag live">Live</em></li><li>Postnatal follow-up<em class="tag next">Next</em></li></ul>
       </div>
-      <div>
-        <h3>For the hospital</h3>
-        <ul><li>A clear view of follow-up activity</li><li>See where mothers are being missed</li><li>Mothers hear from your hospital at every step</li></ul>
+      <div class="leg">
+        <h3>Baby</h3><p class="when">Your clinic's vaccine chart</p>
+        <ul><li>Calls before every vaccine<em class="tag live">Live</em></li><li>Follow-up after a missed dose<em class="tag live">Live</em></li><li>WhatsApp where she agrees<em class="tag live">Live</em></li></ul>
       </div>
     </div>
-    <p class="ill-note" style="margin-top:2rem">The pilot measures what changes at your hospital, against your own past records. We don't quote results we haven't measured.</p>
+    <p class="later"><b>Also coming next:</b> enrolment from a photo of her card, doctors listening to or starting a call from the app, an AI summary on each patient card, and more languages such as Punjabi.</p>
   </div>
 </section>
 
 <!-- SAFETY -->
-<section class="band teal" id="safety" aria-labelledby="h-safety">
-  <div class="wrap">
-    <span class="eyebrow">Safety and responsible use</span>
-    <h2 id="h-safety">Firm rules, set before any real call.</h2>
-    <ul class="rules">
-      <li><div><b>Recorded consent</b><span>Consent is recorded at enrolment. Mothers can stop the calls at any time.</span></div></li>
-      <li><div><b>Your doctor signs off</b><span>Nothing goes live until your doctor approves the schedule and every call script.</span></div></li>
-      <li><div><b>Never discusses the baby's sex</b><span>A fixed rule the AI cannot override (PCPNDT Act).</span></div></li>
-      <li><div><b>No diagnosis, no medicine advice</b><span>It never suggests delaying a dose and only uses answers you have approved.</span></div></li>
-      <li><div><b>Concerns go to clinical review</b><span>Reported warning signs are flagged to your team, never handled by the AI alone.</span></div></li>
-      <li><div><b>Not an emergency service</b><span>Mothers are told to contact the hospital or dial 108 when they need urgent help.</span></div></li>
-      <li><div><b>Her health stays with her</b><span>A family member can take a reminder; questions about the mother's own health are for her.</span></div></li>
-      <li><div><b>Clear about being AI</b><span>Mothers are told the call is from a computer voice, on behalf of your hospital.</span></div></li>
-    </ul>
-    <p class="disc">This describes how Suraksha Sathi is designed. It is not legal advice, a certification or a regulatory approval.</p>
-  </div>
-</section>
-
-<!-- PILOT -->
-<section class="band sand" id="pilot" aria-labelledby="h-pilot">
-  <div class="wrap">
-    <span class="eyebrow">Pilot programme</span>
-    <h2 id="h-pilot">Bring structured maternal and infant follow-up to your hospital.</h2>
-    <p class="lede">We are inviting a small number of hospitals and doctors to pilot Suraksha Sathi with us.</p>
-    <div class="pilot-grid">
-      <ol class="steps">
-        <li><span class="w">Step 1</span><div><b>Sign-off</b><span>You approve the schedule, the call scripts and who on your team sees flags.</span></div></li>
-        <li><span class="w">Step 2</span><div><b>Test calls</b><span>You hear the calls yourself, with test patients, before any mother does.</span></div></li>
-        <li><span class="w">Step 3</span><div><b>Start small</b><span>Begin with a small group of mothers and check it works for your staff.</span></div></li>
-        <li><span class="w">Step 4</span><div><b>Grow</b><span>Add more mothers when you're ready.</span></div></li>
-        <li><span class="w">Step 5</span><div><b>Review together</b><span>Look at the results against your own past records and decide what's next.</span></div></li>
-      </ol>
-      <div class="terms">
-        <h3>The pilot terms</h3>
-        <ul>
-          <li><b>No fee</b> during the pilot</li>
-          <li><b>Hindi calls</b> in the pilot</li>
-          <li><b>Your sign-off</b> before any real call</li>
-          <li><b>Your hospital</b> stays in charge of patient data</li>
-          <li><b>Stop at any time</b>, at no cost</li>
-        </ul>
-        <a class="btn btn-primary" href="#request" style="margin-top:1.25rem;width:100%">Discuss a pilot with us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="band" aria-labelledby="h-about">
-  <div class="wrap">
-    <span class="eyebrow">Who is behind Suraksha Sathi</span>
-    <h2 id="h-about">Built for hospitals that run on paper and memory.</h2>
-    <div class="about">
-      <div>
-        <p>Suraksha Sathi is run by Poonyah India. It was founded by Deepti, who has spent 25 years in technology, 10 of them in health tech, across the UK, the US and India.</p>
-        <p>It is built for busy maternity and child-health practices, many with no patient software, where mothers rely on a phone call far more than an app. Its rules, from how a family member is greeted to how concerns are flagged, have been shaped with the doctors at our first pilot hospital.</p>
-      </div>
-      <ul class="facts">
-        <li><span>Company</span><b>Poonyah India</b></li>
-        <li><span>Founder</span><b>Deepti</b></li>
-        <li><span>Focus</span><b>Maternal and infant care</b></li>
-        <li><span>Pilot language</span><b>Hindi</b></li>
-        <li><span>Contact</span><b><a href="mailto:info@surakshacall.com">info@surakshacall.com</a></b></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- REQUEST -->
-<section class="band teal" id="request" aria-labelledby="h-request">
-  <div class="wrap req-grid">
+<section class="sec" id="safety" aria-labelledby="h-safety" style="background:var(--night-2)">
+  <div class="wrap split">
     <div>
-      <span class="eyebrow">Book a hospital demo</span>
-      <h2 id="h-request">Every mother deserves to be remembered beyond her hospital visit.</h2>
-      <p class="lede">Tell us about your hospital. We'll arrange a walkthrough and a demo call you can hear yourself.</p>
-      <div class="btn-row">
-        <a class="btn btn-wa" id="wa-share" href="https://wa.me/?text=Suraksha%20Sathi%3A%20maternal%20and%20infant%20follow-up%20for%20hospitals%20https%3A%2F%2Fwww.surakshacall.com" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
-          Share on WhatsApp</a>
-      </div>
-      <p class="small" style="color:var(--on-teal-2)">Or email us at <a href="mailto:info@surakshacall.com">info@surakshacall.com</a>.</p>
+      <span class="kicker">Safety and responsible use</span>
+      <h2 id="h-safety">Clever with calls. Careful with care.</h2>
+      <p class="lede">The AI works inside rules your doctor sets, and some rules it can never break.</p>
     </div>
-    <div class="form-card">
+    <div>
+      <ul class="rules">
+        <li><b>Your doctor signs off first</b><span>Nothing goes live until the schedule and every call script are approved.</span></li>
+        <li><b>Recorded consent, easy to stop</b><span>Consent is recorded at enrolment and mothers can stop the calls at any time.</span></li>
+        <li><b>Never discusses the baby's sex</b><span>A fixed rule the AI cannot override, in line with the PCPNDT Act.</span></li>
+        <li><b>No diagnosis, no medicine advice</b><span>It never suggests delaying a dose and only gives answers you have approved.</span></li>
+        <li><b>Flags go to clinical review</b><span>Concerns are put in front of your team, never handled by the AI alone.</span></li>
+        <li><b>Honest about being AI</b><span>Mothers are told it's a computer voice, and that it isn't an emergency service.</span></li>
+      </ul>
+      <p class="fine">This describes how Suraksha Sathi is designed. It is not legal advice, a certification or a regulatory approval.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PILOT + ABOUT -->
+<section class="sec pilot" id="pilot" aria-labelledby="h-pilot">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="kicker">The pilot</span>
+        <h2 id="h-pilot">Start small, with your sign-off at every step.</h2>
+        <ol class="steps">
+          <li><div><b>Sign off</b><span>You approve the schedule, the scripts and who sees flags.</span></div></li>
+          <li><div><b>Hear the test calls</b><span>You listen to calls with test patients before any mother does.</span></div></li>
+          <li><div><b>Start with a few mothers</b><span>Check it works for your staff before growing.</span></div></li>
+          <li><div><b>Review together</b><span>Compare against your own past records, then decide what's next.</span></div></li>
+        </ol>
+      </div>
+      <div style="align-self:center">
+        <div class="terms">
+          <h3>Pilot terms</h3>
+          <ul>
+            <li><span><b>No fee</b> during the pilot</span></li>
+            <li><span><b>Hindi calls</b> throughout the pilot</span></li>
+            <li><span><b>Your hospital</b> stays in charge of patient data</span></li>
+            <li><span><b>Stop any time</b>, at no cost</span></li>
+          </ul>
+          <a class="btn btn-glow" href="#request" style="width:100%;margin-top:1.4rem">Discuss a pilot with us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about">
+      <h3>Who is behind Suraksha Sathi</h3>
+      <div>
+        <p>Suraksha Sathi is run by Poonyah India and founded by Deepti, who has spent 25 years in technology, 10 of them in health tech, across the UK, the US and India.</p>
+        <p>It's built for busy maternity and child-health practices, many with no patient software, where a phone call reaches mothers far better than an app. Its rules, from how a husband is greeted to how a concern is flagged, were shaped with the doctors at our first pilot hospital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec final" id="request" aria-labelledby="h-request">
+  <div class="wrap final-grid">
+    <div>
+      <h2 id="h-request">Every mother deserves to be remembered beyond her visit.</h2>
+      <p class="lede">Tell us about your hospital. We'll show you the app and play you a call in Hindi.</p>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="https://wa.me/?text=Suraksha%20Sathi%3A%20AI%20follow-up%20for%20maternal%20and%20infant%20care%20https%3A%2F%2Fwww.surakshacall.com" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+          Share with a colleague</a>
+      </div>
+      <p class="small">Or email <a href="mailto:info@surakshacall.com">info@surakshacall.com</a></p>
+    </div>
+    <div class="form">
       <form id="req-form" action="mailto:info@surakshacall.com" method="post" enctype="text/plain" novalidate>
-        <div class="form-grid">
-          <div class="f" data-req="name"><label for="r-name">Your name</label><input id="r-name" name="name" autocomplete="name" placeholder="Dr …" maxlength="80"><span class="err">Please enter your name.</span></div>
-          <div class="f" data-req="phone"><label for="r-phone">Phone or WhatsApp</label><input id="r-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 …" maxlength="20"><span class="err">Please enter a phone number with country code.</span></div>
-          <div class="f" data-req="hospital"><label for="r-hospital">Hospital or clinic</label><input id="r-hospital" name="hospital" autocomplete="organization" maxlength="120"><span class="err">Please enter your hospital or clinic.</span></div>
-          <div class="f" data-req="town"><label for="r-town">Town and state</label><input id="r-town" name="town" maxlength="80"><span class="err">Please enter your town.</span></div>
+        <div class="fg">
+          <div class="f" data-req="name"><label for="r-name">Your name</label><input id="r-name" name="name" autocomplete="name" placeholder="Dr …" maxlength="80"><span class="err">Enter your name.</span></div>
+          <div class="f" data-req="phone"><label for="r-phone">Phone or WhatsApp</label><input id="r-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 …" maxlength="20"><span class="err">Enter a number with country code.</span></div>
+          <div class="f" data-req="hospital"><label for="r-hospital">Hospital or clinic</label><input id="r-hospital" name="hospital" autocomplete="organization" maxlength="120"><span class="err">Enter your hospital or clinic.</span></div>
+          <div class="f" data-req="town"><label for="r-town">Town and state</label><input id="r-town" name="town" maxlength="80"><span class="err">Enter your town.</span></div>
           <div class="f" data-req="speciality"><label for="r-spec">Your role</label>
             <select id="r-spec" name="speciality"><option value="">Choose one</option><option>Gynaecology / Obstetrics</option><option>Paediatrics</option><option>Both</option><option>Hospital owner or management</option><option>Other</option></select>
-            <span class="err">Please choose your role.</span></div>
-          <div class="f"><label for="r-volume">Mothers or babies seen a month <span class="opt">(rough guess)</span></label>
+            <span class="err">Choose your role.</span></div>
+          <div class="f"><label for="r-volume">Mothers or babies a month <span class="opt">(rough)</span></label>
             <select id="r-volume" name="volume"><option value="">Choose one</option><option>Under 50</option><option>50–150</option><option>150–400</option><option>Over 400</option></select></div>
           <div class="f wide"><label for="r-note">Anything we should know? <span class="opt">(optional)</span></label><textarea id="r-note" name="note" maxlength="600"></textarea></div>
         </div>
-        <button type="submit" class="btn btn-primary" id="r-send">Book a hospital demo</button>
-        <p class="small">This opens an email to info@surakshacall.com with your details filled in. Please don't include any patient details.</p>
+        <button type="submit" class="btn btn-glow" id="r-send">Book a hospital pilot</button>
+        <p class="small">This opens an email to info@surakshacall.com with your details filled in. Please don't include patient details.</p>
       </form>
       <div class="sent" id="req-sent" hidden role="status">
         <h3>Your email is ready to send</h3>
         <p>Press send in your email app. If nothing opened, copy your details and email them to <a href="mailto:info@surakshacall.com">info@surakshacall.com</a>.</p>
         <pre id="req-text"></pre>
-        <button type="button" class="btn btn-line" id="req-copy" style="margin-top:1rem;color:var(--teal)">Copy my details</button>
+        <button type="button" class="btn btn-ghost" id="req-copy" style="margin-top:1rem">Copy my details</button>
         <p class="small" id="req-copied" role="status"></p>
       </div>
     </div>
@@ -562,45 +570,60 @@ footer b{color:var(--on-teal);font-family:var(--serif);font-weight:600;font-size
 
 <footer>
   <div class="wrap">
-    <div><b>Suraksha Sathi</b><br>© 2026 Poonyah India · Pilot</div>
+    <div><b>Suraksha Sathi</b><br>© 2026 Poonyah India. Pilot.</div>
     <div><a href="mailto:info@surakshacall.com">info@surakshacall.com</a><br><a href="/mothers/" lang="hi">माताओं के लिए जानकारी</a></div>
   </div>
 </footer>
 
 <script>
 (function(){
-  var form=document.getElementById('req-form'); if(!form) return;
-  var sent=document.getElementById('req-sent'), txt=document.getElementById('req-text'),
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero waveform + scripted demo call */
+  var wave=document.getElementById('wave'), n=window.innerWidth<480?26:38;
+  for(var i=0;i<n;i++){var s=document.createElement('span');var h=30+Math.round(65*Math.abs(Math.sin(i*.7)*Math.cos(i*.23)));s.style.setProperty('--h',h+'%');s.style.animationDelay=(i*.045)+'s';wave.appendChild(s);}
+  var con=document.getElementById('console'), st=document.getElementById('c-status');
+  var labels=['AI speaking','Mother speaking','Capturing answers','Concern flagged'];
+  function show(k){
+    con.querySelectorAll('[data-s]').forEach(function(el){el.classList.toggle('on',+el.dataset.s<=k);});
+    wave.classList.toggle('mother',k===1); st.textContent=labels[k];
+  }
+  if(reduce){show(3);} else {var k=0;show(0);setInterval(function(){k=(k+1)%5;show(Math.min(k,3));},2600);}
+
+  /* story tabs */
+  var tabs=[].slice.call(document.querySelectorAll('.stepb')), fill=document.getElementById('fill'), cur=0, timer=null, touched=false;
+  function go(i,focus){
+    cur=i;
+    tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;t.classList.toggle('done',j<i);document.getElementById('p'+j).classList.toggle('on',on);});
+    fill.style.width=(i/4*80)+'%';
+    if(focus)tabs[i].focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){touched=true;clearInterval(timer);go(i);});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;e.preventDefault();touched=true;clearInterval(timer);go((cur+d+5)%5,true);});
+  });
+  go(0);
+  if(!reduce&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&!touched&&!timer){timer=setInterval(function(){go((cur+1)%5);},4200);}
+      else if(!e.isIntersecting&&timer){clearInterval(timer);timer=null;}
+    });},{threshold:.4}).observe(document.getElementById('story'));
+  }
+
+  /* demo request form: opens a pre-filled email */
+  var form=document.getElementById('req-form'), sent=document.getElementById('req-sent'), txt=document.getElementById('req-text'),
       copy=document.getElementById('req-copy'), copied=document.getElementById('req-copied');
   function val(n){var el=form.elements[n];return el?String(el.value||'').trim():'';}
-  function check(){
-    var ok=true;
-    form.querySelectorAll('[data-req]').forEach(function(f){
-      var n=f.getAttribute('data-req'), v=val(n), bad=!v;
-      if(n==='phone') bad=v.replace(/\D/g,'').length<10;
-      f.classList.toggle('bad',bad);
-      var input=f.querySelector('input,select'); if(input) input.setAttribute('aria-invalid',bad?'true':'false');
-      if(bad&&ok){ok=false; if(input) input.focus();}
-    });
-    return ok;
-  }
+  function check(){var ok=true;form.querySelectorAll('[data-req]').forEach(function(f){var n=f.getAttribute('data-req'),v=val(n),bad=!v;if(n==='phone')bad=v.replace(/\D/g,'').length<10;f.classList.toggle('bad',bad);var inp=f.querySelector('input,select');if(inp)inp.setAttribute('aria-invalid',bad?'true':'false');if(bad&&ok){ok=false;if(inp)inp.focus();}});return ok;}
   form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!check()) return;
-    var body='Name: '+val('name')+'\nPhone/WhatsApp: '+val('phone')+'\nHospital: '+val('hospital')+
-      '\nTown: '+val('town')+'\nRole: '+val('speciality')+
-      (val('volume')?'\nMothers/babies a month: '+val('volume'):'')+
-      (val('note')?'\nNote: '+val('note'):'');
-    txt.textContent='Hospital demo request – Suraksha Sathi\n'+body;
-    window.location.href='mailto:info@surakshacall.com?subject='+encodeURIComponent('Hospital demo request – '+val('hospital'))+'&body='+encodeURIComponent(body);
+    e.preventDefault(); if(!check())return;
+    var body='Name: '+val('name')+'\nPhone/WhatsApp: '+val('phone')+'\nHospital: '+val('hospital')+'\nTown: '+val('town')+'\nRole: '+val('speciality')+(val('volume')?'\nMothers/babies a month: '+val('volume'):'')+(val('note')?'\nNote: '+val('note'):'');
+    txt.textContent='Hospital pilot request – Suraksha Sathi\n'+body;
+    window.location.href='mailto:info@surakshacall.com?subject='+encodeURIComponent('Hospital pilot request – '+val('hospital'))+'&body='+encodeURIComponent(body);
     form.hidden=true; sent.hidden=false;
   });
-  form.addEventListener('input',function(e){var f=e.target.closest('.f.bad'); if(f) f.classList.remove('bad');});
-  copy.addEventListener('click',function(){
-    var t=txt.textContent;
-    function sel(){var r=document.createRange();r.selectNodeContents(txt);var s=getSelection();s.removeAllRanges();s.addRange(r);copied.textContent='Selected. Press copy on your phone or keyboard.';}
-    try{navigator.clipboard.writeText(t).then(function(){copied.textContent='Copied. Paste it into an email to info@surakshacall.com.';},sel);}catch(err){sel();}
-  });
+  form.addEventListener('input',function(e){var f=e.target.closest('.f.bad');if(f)f.classList.remove('bad');});
+  copy.addEventListener('click',function(){var t=txt.textContent;function sel(){var r=document.createRange();r.selectNodeContents(txt);var s=getSelection();s.removeAllRanges();s.addRange(r);copied.textContent='Selected. Press copy on your phone or keyboard.';}try{navigator.clipboard.writeText(t).then(function(){copied.textContent='Copied. Paste it into an email to info@surakshacall.com.';},sel);}catch(err){sel();}});
 })();
 </script>
 </body>
