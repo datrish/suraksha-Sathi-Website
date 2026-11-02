@@ -1,15 +1,17 @@
 # Suraksha Sathi website
 
-Static site for the Suraksha Sathi pilot. No build step, no trackers.
+Static site, no build step, no trackers. Deployed on Vercel (framework preset: Other, output directory `.`).
 
-- `index.html` – page for mothers and families (Hindi by default, English toggle)
-- `hospital-pilot-2090/index.html` – page for doctors and hospitals (unlisted: shared directly, never linked from the mothers page) (pilot places, compliance, revenue uplift, request form)
-- `robots.txt` – blocks all crawlers while the pilot is under review (pages also carry `noindex, nofollow`)
+- `index.html` – homepage for doctors and hospitals (English). Demo requests open a pre-filled email to info@surakshacall.com.
+- `mothers/index.html` – page for mothers and families (Hindi by default, English toggle). Link to it directly from the consent slip, clinic card and first WhatsApp message.
+- `/hospital-pilot-2090/` – old doctors' link, now redirects to `/` (set in `vercel.json`).
+- `robots.txt` and the `X-Robots-Tag` header keep the whole site out of search engines during the pilot.
 
-## Before going public
-- Fill the square-bracket placeholders: hospital phone number, privacy notice details, contact details, pilot place count.
-- Connect the doctors' request form to Firebase (currently it shows a copy-and-send fallback).
-- Self-host the Google Fonts for faster loading on weak connections.
+## Content rules
+- Only describe features as live once they work. Anything else is marked "coming next".
+- No invented results, statistics, certifications or pilot place counts.
+- Never call it a reminder service: it is the clinic's care companion.
 
-## Deploy
-Import this repo into Vercel (framework preset: Other, no build command, output directory: `.`).
+## Before sharing widely
+- Set up the info@surakshacall.com mailbox (the site and form depend on it).
+- Confirm the mothers' opt-out methods match what the app supports.

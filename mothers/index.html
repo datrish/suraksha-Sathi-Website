@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173E3E">
+<title>सुरक्षा साथी · माताओं के लिए जानकारी</title>
+<meta name="description" content="क्या आपको सुरक्षा साथी की ओर से फ़ोन आया है? यहाँ जानें यह कॉल क्या है, असली है या नहीं, और इसे कैसे बंद करवाएँ।">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{
+  --teal:#173E3E; --cream:#FAF5EE; --sand:#F3E9DB; --paper:#FFFDF9;
+  --orange:#E3923A; --orange-ink:#8F4D0E; --ink:#1E2928; --ink-2:#4A5453; --line:#E3D3BC;
+  --on-teal:#FAF5EE; --on-teal-2:#C7D8D4; --red:#A63A2B; --red-bg:#F7E4DF;
+  --sans:"Noto Sans Devanagari","Mukta","Nirmala UI","Mangal",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:1.2rem;line-height:1.7}
+p{margin:0}
+a{color:inherit}
+h1,h2,h3{margin:0;color:var(--teal);line-height:1.35;font-weight:700}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--orange-ink);outline-offset:3px;border-radius:6px}
+
+/* language switch: pure CSS, works without JavaScript */
+.lr{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.lr ~ * [lang="en"]{display:none}
+#l-en:checked ~ * [lang="en"]{display:revert}
+#l-en:checked ~ * [lang="hi"]{display:none}
+
+.wrap{max-width:38rem;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+header{background:var(--teal);color:var(--on-teal)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand b{display:block;font-size:1.25rem;line-height:1.2}
+.brand small{display:block;font-size:.85rem;color:var(--orange)}
+.switch{display:flex;border-radius:999px;overflow:hidden;border:1px solid rgba(250,245,238,.3)}
+.switch label{padding:.45rem .95rem;min-height:44px;display:flex;align-items:center;cursor:pointer;font-size:1rem}
+#l-hi:checked ~ header .s-hi, #l-en:checked ~ header .s-en{background:var(--orange);color:var(--teal);font-weight:700}
+#l-hi:focus-visible ~ header .s-hi, #l-en:focus-visible ~ header .s-en{outline:3px solid var(--orange);outline-offset:-3px}
+
+.hero{background:var(--teal);color:var(--on-teal);padding:2rem 0 2.5rem}
+.hero h1{color:var(--on-teal);font-size:1.75rem}
+.hero p{margin-top:.75rem;color:var(--on-teal-2)}
+
+section{padding:2rem 0;border-bottom:1px solid var(--line)}
+section.sand{background:var(--sand)}
+h2{font-size:1.4rem;margin-bottom:.6rem}
+p+p{margin-top:.6rem}
+.big{font-size:1.25rem;font-weight:700;color:var(--teal)}
+
+.never{list-style:none;padding:0;margin:.9rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.never li{background:var(--paper);border:1.5px solid var(--red);border-radius:10px;padding:.7rem .8rem;font-weight:700;color:var(--red)}
+.never li::before{content:"✕ "}
+
+.alert{background:var(--red-bg);border-left:5px solid var(--red);border-radius:8px;padding:1rem 1.1rem}
+.alert h2{color:var(--red)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:56px;margin-top:1rem;border-radius:12px;background:var(--red);color:#fff;font-weight:700;font-size:1.3rem;text-decoration:none}
+
+ol.how,ul.how{margin:.6rem 0 0;padding-left:1.4rem}
+ol.how li,ul.how li{margin-bottom:.45rem}
+
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:0 1.1rem;margin-top:.5rem}
+summary{cursor:pointer;font-weight:700;font-size:1.2rem;color:var(--teal);padding:1rem 0;min-height:48px}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:.8rem}
+details h3{font-size:1.05rem;margin:1rem 0 .25rem}
+details p, details li{font-size:1.05rem;color:var(--ink-2)}
+details ul{padding-left:1.3rem;margin:.3rem 0}
+details .last{margin:1.2rem 0 1rem;font-size:.95rem}
+
+footer{background:var(--teal);color:var(--on-teal-2);padding:1.5rem 0 2rem;font-size:.98rem}
+footer a{color:var(--on-teal)}
+</style>
+</head>
+<body>
+<input type="radio" name="lang" id="l-hi" class="lr" checked>
+<input type="radio" name="lang" id="l-en" class="lr">
+
+<header>
+  <div class="wrap">
+    <div class="brand"><b>सुरक्षा साथी</b><small>Suraksha Sathi</small></div>
+    <div class="switch" role="group" aria-label="भाषा / Language">
+      <label for="l-hi" class="s-hi">हिंदी</label>
+      <label for="l-en" class="s-en">English</label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div lang="hi">
+        <h1>क्या आपको सुरक्षा साथी की ओर से फ़ोन आया है?</h1>
+        <p>सुरक्षा साथी आपके अस्पताल का देखभाल साथी है। यह आपके अस्पताल की ओर से गर्भावस्था, आपकी देखभाल और बच्चे के टीकों के बारे में फ़ोन करता है।</p>
+      </div>
+      <div lang="en">
+        <h1>Did you get a call from Suraksha Sathi?</h1>
+        <p>Suraksha Sathi is your hospital's care companion. It calls on behalf of your hospital about your pregnancy, your care and your baby's vaccines.</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div lang="hi">
+        <h2>यह कॉल कौन करता है?</h2>
+        <p>यह कॉल एक <b>कंप्यूटर की आवाज़ (AI)</b> करती है, आपके अस्पताल की ओर से। यह कोई डॉक्टर या नर्स नहीं है।</p>
+        <p>कॉल सुबह 10 बजे से शाम 7 बजे के बीच आती है। कॉल न उठे तो एक बार और कोशिश होती है, फिर WhatsApp संदेश आ सकता है।</p>
+        <p>अगर घर में कोई और (जैसे पति) फ़ोन उठाए, तो वे याद की बात सुन सकते हैं। माँ की अपनी तबीयत के सवाल सिर्फ़ माँ से पूछे जाते हैं।</p>
+      </div>
+      <div lang="en">
+        <h2>Who makes the call?</h2>
+        <p>The call is made by a <b>computer voice (AI)</b>, on behalf of your hospital. It is not a doctor or nurse.</p>
+        <p>Calls come between 10am and 7pm. If you miss one, it tries once more, and then you may get a WhatsApp message.</p>
+        <p>If someone else at home (such as your husband) answers, they can take the reminder. Questions about the mother's own health are asked only to her.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand">
+    <div class="wrap">
+      <div lang="hi">
+        <h2>क्या यह असली फ़ोन है?</h2>
+        <p>अपने अस्पताल के रिसेप्शन से पूछें। वे बता सकते हैं कि कॉल किस नंबर से आती है। उस नंबर को अपने फ़ोन में "सुरक्षा साथी" नाम से सेव कर लें।</p>
+        <p class="big" style="margin-top:1.1rem">सुरक्षा साथी कभी नहीं माँगता:</p>
+        <ul class="never"><li>OTP या पासवर्ड</li><li>बैंक, कार्ड या UPI</li><li>कोई पैसा</li><li>आधार नंबर</li></ul>
+        <p>अगर कोई कॉल पर ये माँगे, तो <b>फ़ोन काट दें</b> और अस्पताल को बताएँ।</p>
+      </div>
+      <div lang="en">
+        <h2>Is the call genuine?</h2>
+        <p>Ask your hospital reception. They can tell you which number the calls come from. Save it in your phone as "Suraksha Sathi".</p>
+        <p class="big" style="margin-top:1.1rem">Suraksha Sathi never asks for:</p>
+        <ul class="never"><li>OTP or password</li><li>Bank, card or UPI</li><li>Any money</li><li>Aadhaar number</li></ul>
+        <p>If a caller asks for any of these, <b>hang up</b> and tell your hospital.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div lang="hi">
+        <h2>फ़ोन पर क्या पूछा जाएगा?</h2>
+        <p>आपकी आने वाली जाँच, स्कैन या बच्चे के टीके की याद दिलाई जाएगी, और पूछा जा सकता है कि आप और बच्चा कैसे हैं। आपके जवाब दर्ज होते हैं ताकि अस्पताल की टीम उन्हें देख सके।</p>
+        <p>जवाब देना आपकी मर्ज़ी है। यह आवाज़ कोई बीमारी नहीं बताती, कोई दवा नहीं सुझाती, और बच्चे के लिंग के बारे में कभी बात नहीं करती।</p>
+      </div>
+      <div lang="en">
+        <h2>What will you be asked?</h2>
+        <p>You'll be reminded about your next check-up, scan or your baby's vaccine, and may be asked how you and the baby are. Your answers are recorded so the hospital team can see them.</p>
+        <p>Answering is up to you. The voice never diagnoses, never suggests medicine and never talks about the baby's sex.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="alert">
+        <div lang="hi">
+          <h2>तबीयत ख़राब हो तो इंतज़ार न करें</h2>
+          <p>सुरक्षा साथी डॉक्टर या एम्बुलेंस की जगह नहीं है। अगर आपको या बच्चे को कोई तकलीफ़ हो, तो कॉल का इंतज़ार न करें। सीधे अपने अस्पताल को फ़ोन करें। आपात स्थिति में 108 पर कॉल करें।</p>
+          <a class="btn" href="tel:108">108 पर कॉल करें</a>
+        </div>
+        <div lang="en">
+          <h2>If you feel unwell, don't wait</h2>
+          <p>Suraksha Sathi does not replace a doctor or an ambulance. If you or your baby are unwell, don't wait for a call. Phone your hospital directly. In an emergency, dial 108.</p>
+          <a class="btn" href="tel:108">Call 108</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand">
+    <div class="wrap">
+      <div lang="hi">
+        <h2>मुझे फ़ोन नहीं चाहिए। क्या करूँ?</h2>
+        <p>आप कभी भी, बिना कारण बताए, कॉल बंद करवा सकती हैं। इससे आपके इलाज पर कोई असर नहीं पड़ेगा।</p>
+        <ul class="how">
+          <li>कॉल के दौरान कह दें: "मुझे कॉल मत कीजिए।"</li>
+          <li>या अपने अस्पताल के रिसेप्शन पर बता दें।</li>
+        </ul>
+      </div>
+      <div lang="en">
+        <h2>I don't want these calls. What do I do?</h2>
+        <p>You can stop the calls at any time, without giving a reason. It won't affect your care.</p>
+        <ul class="how">
+          <li>Say during the call: "Please stop calling me."</li>
+          <li>Or tell your hospital reception.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div lang="hi">
+        <h2>आपकी जानकारी</h2>
+        <details>
+          <summary>गोपनीयता सूचना पढ़ें</summary>
+          <h3>कौन ज़िम्मेदार है?</h3>
+          <p>आपकी जानकारी के लिए आपका अस्पताल ज़िम्मेदार है। Poonyah India, "सुरक्षा साथी" नाम से, अस्पताल की ओर से और उसके निर्देश पर यह सेवा चलाती है।</p>
+          <h3>कौन-सी जानकारी ली जाती है?</h3>
+          <p>आपका नाम और फ़ोन नंबर; गर्भावस्था और बच्चे के जन्म की तारीख़ें; जाँच, स्कैन और टीकों की तारीख़ें; कॉल और WhatsApp संदेशों का रिकॉर्ड, जिसमें आपके जवाब शामिल हैं; और आपकी सहमति।</p>
+          <h3>क्यों?</h3>
+          <p>सिर्फ़ आपको समय पर कॉल करने, आपके जवाब दर्ज करने, और ज़रूरी बातें अस्पताल की टीम तक पहुँचाने के लिए। आपकी जानकारी बेची नहीं जाती और विज्ञापन में इस्तेमाल नहीं होती।</p>
+          <h3>कौन देख सकता है?</h3>
+          <p>आपके अस्पताल की टीम, और सेवा चलाने के लिए ज़रूरी सीमित लोग और सेवा देने वाली कंपनियाँ (जैसे कॉल करने वाली कंपनी)।</p>
+          <h3>कहाँ रखी जाती है?</h3>
+          <p>आपके रिकॉर्ड भारत में (मुंबई) सर्वर पर रखे जाते हैं।</p>
+          <h3>कितने समय तक?</h3>
+          <p>यह अवधि आपका अस्पताल तय करता है। अपने अस्पताल से पूछें।</p>
+          <h3>आपके अधिकार</h3>
+          <ul>
+            <li>अपनी जानकारी देखना, ठीक करवाना या हटवाना</li>
+            <li>कभी भी अपनी सहमति वापस लेना</li>
+          </ul>
+          <p>इसके लिए अपने अस्पताल से बात करें, या <a href="mailto:info@surakshacall.com">info@surakshacall.com</a> पर लिखें।</p>
+          <h3>शिकायत</h3>
+          <p>पहले अपने अस्पताल को या ऊपर दिए ईमेल पर बताएँ। अगर हल न हो, तो आप भारत के डेटा संरक्षण बोर्ड (Data Protection Board of India) से शिकायत कर सकती हैं।</p>
+          <p class="last">आख़िरी बदलाव: 2 नवंबर 2026</p>
+        </details>
+      </div>
+      <div lang="en">
+        <h2>Your information</h2>
+        <details>
+          <summary>Read the privacy notice</summary>
+          <h3>Who is responsible?</h3>
+          <p>Your hospital is responsible for your information. Poonyah India, trading as Suraksha Sathi, runs this service on the hospital's behalf and on its instructions.</p>
+          <h3>What is collected?</h3>
+          <p>Your name and phone number; pregnancy and birth dates; check-up, scan and vaccine dates; a record of calls and WhatsApp messages, including your answers; and your consent.</p>
+          <h3>Why?</h3>
+          <p>Only to call you on time, record your answers and pass important points to the hospital team. Your information is never sold or used for advertising.</p>
+          <h3>Who can see it?</h3>
+          <p>Your hospital team, plus a limited number of people and service providers needed to run the service (such as the calling provider).</p>
+          <h3>Where is it stored?</h3>
+          <p>Your records are stored on servers in India (Mumbai).</p>
+          <h3>How long is it kept?</h3>
+          <p>Your hospital sets this period. Please ask your hospital.</p>
+          <h3>Your rights</h3>
+          <ul>
+            <li>See, correct or delete your information</li>
+            <li>Withdraw your consent at any time</li>
+          </ul>
+          <p>Speak to your hospital, or email <a href="mailto:info@surakshacall.com">info@surakshacall.com</a>.</p>
+          <h3>Complaints</h3>
+          <p>First tell your hospital or email us. If it isn't resolved, you can complain to the Data Protection Board of India.</p>
+          <p class="last">Last updated: 2 November 2026</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p lang="hi">सुरक्षा साथी · © 2026 Poonyah India · <a href="mailto:info@surakshacall.com">info@surakshacall.com</a></p>
+    <p lang="en">Suraksha Sathi · © 2026 Poonyah India · <a href="mailto:info@surakshacall.com">info@surakshacall.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hi=document.getElementById('l-hi'),en=document.getElementById('l-en');
+  try{ if(localStorage.getItem('ss-lang')==='en'){ en.checked=true; document.documentElement.lang='en'; } }catch(e){}
+  function save(l){ document.documentElement.lang=l; try{localStorage.setItem('ss-lang',l);}catch(e){} }
+  hi.addEventListener('change',function(){save('hi');});
+  en.addEventListener('change',function(){save('en');});
+})();
+</script>
+</body>
+</html>

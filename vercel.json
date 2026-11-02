@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {"source": "/hospital-pilot-2090", "destination": "/", "permanent": false},
+    {"source": "/hospital-pilot-2090/:path*", "destination": "/", "permanent": false}
+  ],
   "headers": [{"source": "/(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]}]
 }
